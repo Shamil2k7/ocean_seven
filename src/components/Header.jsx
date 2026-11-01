@@ -102,19 +102,27 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Mobile Hamburger Button */}
-            <div className="flex lg:hidden items-center gap-2">
+            {/* Mobile Circular Hamburger Button */}
+            <div className="flex lg:hidden items-center">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={`p-2 rounded-xs focus:outline-none transition-colors ${
+                className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-200 focus:outline-none ${
                   isTransparent
-                    ? "text-white hover:text-ocean"
-                    : "text-charcoal hover:text-ocean"
+                    ? "border-white/40 text-white bg-white/5 active:bg-white/15"
+                    : "border-border text-charcoal bg-surface active:bg-border"
                 }`}
                 aria-label="Toggle navigation menu"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <div className="flex flex-col gap-1 items-center justify-center">
+                    <span className="w-4 h-0.5 bg-current rounded-full" />
+                    <span className="w-4 h-0.5 bg-current rounded-full" />
+                    <span className="w-4 h-0.5 bg-current rounded-full" />
+                  </div>
+                )}
               </button>
             </div>
 
