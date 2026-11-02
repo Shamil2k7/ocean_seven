@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-navy text-white border-t border-white/10 overflow-hidden">
       {/* Subtle Ambient Rising Bubbles in Footer */}
-      <UnderwaterAmbient showFish={false} showBubbles={true} showCaustics={false} bubbleCount={5} className="opacity-30" />
+      <UnderwaterAmbient showBubbles={true} showRays={false} bubbleCount={5} className="opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
         

@@ -14,8 +14,6 @@ export default function CompanyIntro() {
       {/* Subtle Ocean Background Animation & Sliding Ocean Imagery */}
       <UnderwaterAmbient
         theme="light"
-        showFish={true}
-        fishCount={2}
         showBubbles={true}
         bubbleCount={5}
         showRays={true}

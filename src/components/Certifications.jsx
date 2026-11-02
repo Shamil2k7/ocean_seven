@@ -44,8 +44,6 @@ export default function Certifications() {
       {/* Subtle Ocean Background Animation & Sliding Ocean Imagery */}
       <UnderwaterAmbient
         theme="light"
-        showFish={true}
-        fishCount={2}
         showBubbles={true}
         bubbleCount={4}
         showRays={true}

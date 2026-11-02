@@ -111,8 +111,6 @@ export default function FeaturedProducts({
       {/* Subtle Ocean Background Movement with Sliding Depth Imagery */}
       <UnderwaterAmbient
         theme="light"
-        showFish={true}
-        fishCount={2}
         showBubbles={true}
         bubbleCount={5}
         showRays={true}

@@ -35,11 +35,9 @@ export default function Hero() {
             />
           </div>
 
-          {/* Ambient Bubbles, Swimming Fish Silhouettes & Caustics */}
+          {/* Ambient Bubbles, Light Rays & Caustics */}
           <UnderwaterAmbient
             theme="dark"
-            showFish={true}
-            fishCount={3}
             showBubbles={true}
             showRays={true}
             bubbleCount={7}
@@ -191,11 +189,9 @@ export default function Hero() {
             sizes="100vw"
           />
 
-          {/* Underwater Ambient Bubbles & Swimming Fish */}
+          {/* Underwater Ambient Bubbles & Light Rays */}
           <UnderwaterAmbient
             theme="dark"
-            showFish={true}
-            fishCount={2}
             showBubbles={true}
             showRays={true}
             bubbleCount={4}

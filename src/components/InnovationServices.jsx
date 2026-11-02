@@ -47,7 +47,7 @@ export default function InnovationServices() {
   return (
     <section className="relative py-20 lg:py-28 bg-navy text-white overflow-hidden">
       {/* Subtle Ambient Caustics & Bubbles for Dark Ocean Section */}
-      <UnderwaterAmbient showFish={false} showBubbles={true} showCaustics={true} bubbleCount={5} className="opacity-30" />
+      <UnderwaterAmbient showBubbles={true} showRays={true} bubbleCount={5} className="opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
