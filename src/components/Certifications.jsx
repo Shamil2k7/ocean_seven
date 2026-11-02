@@ -1,6 +1,7 @@
 "use client";
 
 import { ShieldCheck, ThermometerSnowflake, FileCheck, CheckCircle2, Award } from "lucide-react";
+import UnderwaterAmbient from "./UnderwaterAmbient";
 
 const commitments = [
   {
@@ -27,8 +28,24 @@ const commitments = [
 
 export default function Certifications() {
   return (
-    <section className="py-16 lg:py-20 bg-surface border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden py-16 lg:py-20 bg-surface border-b border-border">
+      {/* Subtle Ocean Background Animation & Sliding Ocean Imagery */}
+      <UnderwaterAmbient
+        theme="light"
+        showFish={true}
+        fishCount={2}
+        showBubbles={true}
+        bubbleCount={4}
+        showRays={true}
+        slidingImage={{
+          src: "/images/hero/deep-underwater.jpg",
+          alt: "Deep underwater ocean background",
+          position: "right",
+          opacity: 0.08,
+        }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12">

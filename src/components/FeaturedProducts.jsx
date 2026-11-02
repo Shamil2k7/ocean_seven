@@ -6,6 +6,7 @@ import { ArrowRight, Sparkles, Filter } from "lucide-react";
 import productsData from "@/data/products.json";
 import ProductCard from "./ProductCard";
 import ProductEnquiryModal from "./ProductEnquiryModal";
+import UnderwaterAmbient from "./UnderwaterAmbient";
 
 const categories = [
   "All",
@@ -55,8 +56,24 @@ export default function FeaturedProducts({
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-white border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden py-20 lg:py-28 bg-white border-b border-border">
+      {/* Subtle Ocean Background Movement with Sliding Depth Imagery */}
+      <UnderwaterAmbient
+        theme="light"
+        showFish={true}
+        fishCount={2}
+        showBubbles={true}
+        bubbleCount={5}
+        showRays={true}
+        slidingImage={{
+          src: "/images/hero/ocean-depths.jpg",
+          alt: "Ocean depths background",
+          position: "right",
+          opacity: 0.08,
+        }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">

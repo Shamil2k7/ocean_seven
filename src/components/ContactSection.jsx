@@ -11,6 +11,7 @@ import {
   MessageSquare,
   ShieldCheck 
 } from "lucide-react";
+import UnderwaterAmbient from "./UnderwaterAmbient";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -29,8 +30,24 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-surface border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative overflow-hidden py-20 lg:py-28 bg-surface border-b border-border">
+      {/* Subtle Ocean Background Animation & Sliding Ocean Imagery */}
+      <UnderwaterAmbient
+        theme="light"
+        showFish={true}
+        fishCount={2}
+        showBubbles={true}
+        bubbleCount={4}
+        showRays={true}
+        slidingImage={{
+          src: "/images/editorial/local-waters.jpg",
+          alt: "Coastal water atmosphere",
+          position: "right",
+          opacity: 0.08,
+        }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12">

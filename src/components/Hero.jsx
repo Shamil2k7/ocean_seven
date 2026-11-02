@@ -33,7 +33,14 @@ export default function Hero() {
           </div>
 
           {/* Ambient Bubbles, Swimming Fish Silhouettes & Caustics */}
-          <UnderwaterAmbient showFish={true} showBubbles={true} showCaustics={true} bubbleCount={7} />
+          <UnderwaterAmbient
+            theme="dark"
+            showFish={true}
+            fishCount={3}
+            showBubbles={true}
+            showRays={true}
+            bubbleCount={7}
+          />
 
           {/* Desktop Left Gradient for Text Contrast */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#041926]/95 via-[#041926]/75 to-transparent w-3/5 z-[2]" />
@@ -153,7 +160,14 @@ export default function Hero() {
           />
 
           {/* Underwater Ambient Bubbles & Swimming Fish */}
-          <UnderwaterAmbient showFish={true} showBubbles={true} showCaustics={true} bubbleCount={5} />
+          <UnderwaterAmbient
+            theme="dark"
+            showFish={true}
+            fishCount={2}
+            showBubbles={true}
+            showRays={true}
+            bubbleCount={4}
+          />
 
           {/* Subtle Top Overlay to Protect Mobile Headline Legibility */}
           <div className="absolute inset-x-0 top-0 h-[48%] bg-gradient-to-b from-[#041926]/90 via-[#041926]/55 to-transparent z-[2] pointer-events-none" />

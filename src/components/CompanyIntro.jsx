@@ -3,11 +3,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, MapPin } from "lucide-react";
+import UnderwaterAmbient from "./UnderwaterAmbient";
 
 export default function CompanyIntro() {
   return (
-    <section id="company-intro" className="py-20 lg:py-28 bg-white border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="company-intro" className="relative overflow-hidden py-20 lg:py-28 bg-white border-b border-border">
+      {/* Subtle Ocean Background Animation & Sliding Ocean Imagery */}
+      <UnderwaterAmbient
+        theme="light"
+        showFish={true}
+        fishCount={2}
+        showBubbles={true}
+        bubbleCount={5}
+        showRays={true}
+        slidingImage={{
+          src: "/images/hero/marine-life.jpg",
+          alt: "Marine ocean waters",
+          position: "right",
+          opacity: 0.10,
+        }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Two-Column Clean Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
