@@ -20,15 +20,28 @@ const categories = [
 export default function FeaturedProducts({
   title = "EXPLORE OUR SEAFOOD COLLECTION",
   subtitle = "Discover our selection of seafood products.",
+  activeCategory: propActiveCategory,
+  onSelectCategory: propOnSelectCategory,
+  showCategoryTabs = true,
 }) {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [internalCategory, setInternalCategory] = useState("All");
+  const activeCategory = propActiveCategory !== undefined ? propActiveCategory : internalCategory;
+  const setActiveCategory = propOnSelectCategory || setInternalCategory;
+
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredProducts = useMemo(() => {
     let list = productsData;
-    if (activeCategory !== "All") {
-      list = list.filter((p) => p.category.toLowerCase() === activeCategory.toLowerCase());
+    const current = activeCategory.trim().toLowerCase();
+    if (current !== "all") {
+      list = list.filter((p) => {
+        const prodCat = p.category.toLowerCase().trim();
+        if (prodCat === current) return true;
+        if (current === "seafood products" && prodCat === "value added seafood") return true;
+        if (current === "value added seafood" && prodCat === "seafood products") return true;
+        return false;
+      });
     } else {
       // Show premier curated selection on homepage
       list = list.filter((p) => p.featured || ["hamour-whole", "blue-fin-tuna", "canadian-lobster", "shrimps-h-on-black-tiger", "squid-ring", "live-scallops", "king-fish-steak", "cooked-octopus-tentacles"].includes(p.id));
@@ -75,23 +88,25 @@ export default function FeaturedProducts({
           </div>
         </div>
 
-        {/* Category Filter Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 scrollbar-none border-b border-border">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              onClick={() => setActiveCategory(cat)}
-              className={`px-3 sm:px-4 py-1.5 rounded-xs text-xs font-heading font-medium tracking-wide transition-colors whitespace-nowrap shrink-0 ${
-                activeCategory === cat
-                  ? "bg-navy text-white font-semibold"
-                  : "bg-surface text-charcoal hover:bg-border/60 border border-border"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+        {/* Optional Category Filter Tabs (hidden when using circular CategoryShowcase navigation) */}
+        {showCategoryTabs && (
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 scrollbar-none border-b border-border">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => setActiveCategory(cat)}
+                className={`px-3 sm:px-4 py-1.5 rounded-xs text-xs font-heading font-medium tracking-wide transition-colors whitespace-nowrap shrink-0 ${
+                  activeCategory === cat
+                    ? "bg-navy text-white font-semibold"
+                    : "bg-surface text-charcoal hover:bg-border/60 border border-border"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Product Grid with EXACT 2 per row on Mobile, 3 on Tablet, 4 on Desktop */}
         <div className="product-grid">

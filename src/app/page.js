@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import CompanyIntro from "@/components/CompanyIntro";
-import CategoryShowcase from "@/components/CategoryShowcase";
-import FeaturedProducts from "@/components/FeaturedProducts";
+import HomeShowcase from "@/components/HomeShowcase";
 import InnovationServices from "@/components/InnovationServices";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CompanyStats from "@/components/CompanyStats";
@@ -20,14 +19,8 @@ export default function HomePage() {
       {/* Company Introduction */}
       <CompanyIntro />
 
-      {/* Seafood Categories - 8 Divisions */}
-      <CategoryShowcase />
-
-      {/* Prominent Featured Products Showcase - "EXPLORE OUR SEAFOOD COLLECTION" */}
-      <FeaturedProducts
-        title="EXPLORE OUR SEAFOOD COLLECTION"
-        subtitle="Discover our selection of seafood products."
-      />
+      {/* Seafood Categories & Collection Navigation */}
+      <HomeShowcase />
 
       {/* Trading & Supply Capabilities */}
       <InnovationServices />

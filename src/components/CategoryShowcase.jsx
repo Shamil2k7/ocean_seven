@@ -2,81 +2,85 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Grid } from "lucide-react";
 import categoriesData from "@/data/categories.json";
 
-export default function CategoryShowcase({ onSelectCategory, activeCategory }) {
+const ALL_CATEGORY = {
+  id: "all",
+  name: "All",
+  slug: "All",
+  count: 59,
+  image: "/images/editorial/fresh-catch.jpg",
+};
+
+const categories = [ALL_CATEGORY, ...categoriesData];
+
+export default function CategoryShowcase({ onSelectCategory, activeCategory = "All" }) {
+  // Normalize comparison to match category accurately
+  const isSelected = (cat) => {
+    if (!activeCategory) return cat.id === "all";
+    const current = activeCategory.trim().toLowerCase();
+    const name = cat.name.trim().toLowerCase();
+    const id = cat.id.trim().toLowerCase();
+    const alias = cat.alias?.trim().toLowerCase();
+
+    if (current === "all" && (name === "all" || id === "all")) return true;
+    if (name === current || id === current) return true;
+    if (alias && alias === current) return true;
+
+    // Cross-match Seafood Products and Value Added Seafood
+    if (current === "seafood products" && (name.includes("value added") || id.includes("value-added"))) return true;
+    if (current === "value added seafood" && (name.includes("seafood products") || id.includes("seafood-products"))) return true;
+
+    return false;
+  };
+
+  const handleSelect = (categoryName) => {
+    if (onSelectCategory) {
+      onSelectCategory(categoryName);
+    }
+  };
+
   return (
-    <section id="categories" className="py-20 lg:py-28 bg-surface border-b border-border relative overflow-hidden">
+    <nav
+      id="categories"
+      aria-label="Seafood categories"
+      className="bg-[#F8F8F5] border-y border-[#E2E8F0] py-5 sm:py-6 lg:py-7 transition-colors select-none"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
-            <span className="text-xs uppercase tracking-widest font-heading font-semibold text-ocean block mb-2">
-              Seafood Portfolio
-            </span>
-            <h2 className="font-heading font-semibold text-2xl sm:text-3xl lg:text-4xl text-charcoal tracking-tight">
-              SEAFOOD CATEGORIES
-            </h2>
-            <p className="mt-2 text-muted text-sm sm:text-base max-w-2xl">
-              Organized into eight commercial seafood divisions with verified product lines, strict cold-chain specifications, and B2B wholesale availability.
-            </p>
-          </div>
+        {/* Horizontal Category Navigation Bar */}
+        <div className="flex items-start justify-start lg:justify-center overflow-x-auto scrollbar-none snap-x snap-mandatory gap-4 sm:gap-6 lg:gap-7 xl:gap-8 px-2 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          {categories.map((category) => {
+            const active = isSelected(category);
 
-          <div className="flex items-center gap-2 text-xs font-semibold text-muted">
-            <Grid className="w-4 h-4 text-ocean" />
-            <span>8 Specialized Divisions • 59 Products</span>
-          </div>
-        </div>
-
-        {/* Categories Grid - Large Rectangular Cards with Smooth Reveal */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categoriesData.map((category, idx) => {
-            const isSelected = activeCategory && activeCategory.toLowerCase() === category.name.toLowerCase();
-
-            const cardContent = (
-              <div
-                className={`reveal-on-scroll stagger-${(idx % 4) + 1} group h-full bg-white rounded-xs border transition-all duration-300 md:hover:-translate-y-[3px] flex flex-col justify-between overflow-hidden cursor-pointer ${
-                  isSelected
-                    ? "border-ocean ring-1 ring-ocean shadow-md"
-                    : "border-border hover:border-ocean/60 md:hover:shadow-sm"
-                }`}
-              >
-                {/* Large Rectangular Image Container */}
-                <div className="relative aspect-[16/10] bg-surface p-5 flex items-center justify-center overflow-hidden border-b border-border">
+            const itemContent = (
+              <div className="group flex flex-col items-center text-center shrink-0 cursor-pointer snap-center w-[72px] sm:w-[82px] lg:w-[90px] transition-transform duration-200 hover:-translate-y-0.5">
+                {/* Circular Seafood Photograph */}
+                <div
+                  className={`relative w-[56px] h-[56px] sm:w-[62px] sm:h-[62px] lg:w-[66px] lg:h-[66px] rounded-full overflow-hidden bg-white transition-all duration-200 ${
+                    active
+                      ? "border-2 border-[#1684C6] ring-2 ring-[#1684C6]/25 ring-offset-2 ring-offset-[#F8F8F5] shadow-xs"
+                      : "border border-[#E2E8F0] group-hover:border-[#1684C6]/60 group-hover:shadow-2xs"
+                  }`}
+                >
                   <Image
                     src={category.image}
                     alt={category.name}
                     fill
-                    className="object-contain p-4 transition-transform duration-300 md:group-hover:scale-[1.03]"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 56px, (max-width: 1024px) 62px, 66px"
+                    className="object-cover object-center w-full h-full rounded-full transition-transform duration-300 group-hover:scale-108"
                   />
-                  
-                  {/* Verified Count Badge */}
-                  <div className="absolute top-3 right-3 pointer-events-none">
-                    <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 bg-white text-navy border border-border rounded-xs">
-                      {category.count} Products
-                    </span>
-                  </div>
                 </div>
 
-                {/* Details Container */}
-                <div className="p-5 flex flex-col justify-between flex-grow">
-                  <div>
-                    <h3 className="font-heading font-semibold text-base sm:text-lg text-charcoal group-hover:text-ocean transition-colors">
-                      {category.name}
-                    </h3>
-                    <p className="mt-2 text-muted text-xs leading-relaxed line-clamp-3">
-                      {category.description}
-                    </p>
-                  </div>
-
-                  <div className="mt-5 pt-3 border-t border-border flex items-center justify-between text-xs font-heading font-semibold text-ocean group-hover:text-navy transition-colors">
-                    <span className="uppercase tracking-wider text-[11px]">Explore Category</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </div>
+                {/* Category Name Underneath */}
+                <span
+                  className={`mt-2 sm:mt-2.5 font-heading text-[12px] sm:text-[13px] leading-tight text-center tracking-tight transition-colors duration-200 line-clamp-2 ${
+                    active
+                      ? "text-[#1684C6] font-semibold"
+                      : "text-[#101F46] font-medium group-hover:text-[#1684C6]"
+                  }`}
+                >
+                  {category.name}
+                </span>
               </div>
             );
 
@@ -85,10 +89,11 @@ export default function CategoryShowcase({ onSelectCategory, activeCategory }) {
                 <button
                   key={category.id}
                   type="button"
-                  onClick={() => onSelectCategory(category.name)}
-                  className="text-left w-full h-full focus:outline-none"
+                  onClick={() => handleSelect(category.name)}
+                  aria-pressed={active}
+                  className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1684C6] rounded-full"
                 >
-                  {cardContent}
+                  {itemContent}
                 </button>
               );
             }
@@ -96,16 +101,19 @@ export default function CategoryShowcase({ onSelectCategory, activeCategory }) {
             return (
               <Link
                 key={category.id}
-                href={`/products?category=${encodeURIComponent(category.name)}#catalogue`}
-                className="block h-full focus:outline-none"
+                href={
+                  category.id === "all"
+                    ? "/products#catalogue"
+                    : `/products?category=${encodeURIComponent(category.name)}#catalogue`
+                }
+                className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1684C6] rounded-full"
               >
-                {cardContent}
+                {itemContent}
               </Link>
             );
           })}
         </div>
-
       </div>
-    </section>
+    </nav>
   );
 }

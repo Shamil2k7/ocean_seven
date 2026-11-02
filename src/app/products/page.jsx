@@ -44,9 +44,13 @@ function ProductsContent() {
   // Filter products by category, search term, and status
   const filteredProducts = useMemo(() => {
     return productsData.filter((product) => {
+      const currentCat = activeCategory.toLowerCase().trim();
+      const prodCat = product.category.toLowerCase().trim();
       const matchesCategory =
-        activeCategory === "All" ||
-        product.category.toLowerCase() === activeCategory.toLowerCase();
+        currentCat === "all" ||
+        prodCat === currentCat ||
+        (currentCat === "seafood products" && prodCat === "value added seafood") ||
+        (currentCat === "value added seafood" && prodCat === "seafood products");
 
       const query = searchQuery.toLowerCase().trim();
       const matchesSearch =
@@ -137,36 +141,52 @@ function ProductsContent() {
             </div>
           </div>
 
-          {/* Bottom Row: 8 Category Buttons + All */}
-          <div className="pt-2 border-t border-border flex flex-wrap items-center gap-1.5">
-            <button
-              type="button"
-              onClick={() => setActiveCategory("All")}
-              className={`px-3 py-1.5 rounded-xs text-xs font-heading font-medium tracking-wide transition-colors ${
-                activeCategory === "All"
-                  ? "bg-ocean text-white font-semibold"
-                  : "bg-white text-charcoal hover:bg-border/60 border border-border"
-              }`}
-            >
-              All (59)
-            </button>
+          {/* Active Filter Indicators Bar */}
+          {(activeCategory !== "All" || searchQuery || statusFilter !== "All") && (
+            <div className="pt-3 border-t border-border flex flex-wrap items-center justify-between gap-2 text-xs">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-muted text-[11px]">Active Filter:</span>
+                {activeCategory !== "All" && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-ocean/10 text-ocean border border-ocean/20 rounded-xs font-semibold">
+                    <span>Category: {activeCategory}</span>
+                    <button
+                      type="button"
+                      onClick={() => setActiveCategory("All")}
+                      aria-label="Clear category filter"
+                      className="hover:text-navy font-bold leading-none"
+                    >
+                      ×
+                    </button>
+                  </span>
+                )}
+                {statusFilter !== "All" && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-navy/10 text-navy border border-navy/20 rounded-xs font-semibold">
+                    <span>Condition: {statusFilter}</span>
+                    <button
+                      type="button"
+                      onClick={() => setStatusFilter("All")}
+                      aria-label="Clear condition filter"
+                      className="hover:text-ocean font-bold leading-none"
+                    >
+                      ×
+                    </button>
+                  </span>
+                )}
+                {searchQuery && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-surface text-charcoal border border-border rounded-xs font-medium">
+                    <span>&ldquo;{searchQuery}&rdquo;</span>
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery("")}
+                      aria-label="Clear search query"
+                      className="hover:text-ocean font-bold leading-none"
+                    >
+                      ×
+                    </button>
+                  </span>
+                )}
+              </div>
 
-            {categoriesData.map((cat) => (
-              <button
-                key={cat.id}
-                type="button"
-                onClick={() => setActiveCategory(cat.name)}
-                className={`px-3 py-1.5 rounded-xs text-xs font-heading font-medium tracking-wide transition-colors ${
-                  activeCategory.toLowerCase() === cat.name.toLowerCase()
-                    ? "bg-ocean text-white font-semibold"
-                    : "bg-white text-charcoal hover:bg-border/60 border border-border"
-                }`}
-              >
-                {cat.name} ({cat.count})
-              </button>
-            ))}
-
-            {(activeCategory !== "All" || searchQuery || statusFilter !== "All") && (
               <button
                 type="button"
                 onClick={() => {
@@ -174,13 +194,13 @@ function ProductsContent() {
                   setSearchQuery("");
                   setStatusFilter("All");
                 }}
-                className="ml-auto flex items-center gap-1.5 px-3 py-1.5 text-xs text-ocean hover:text-navy font-semibold transition-colors"
+                className="flex items-center gap-1.5 px-2 py-1 text-xs text-ocean hover:text-navy font-semibold transition-colors"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
-                <span>Reset Filters</span>
+                <span>Reset All Filters</span>
               </button>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* Product Cards Grid - Exactly 2 per row on Mobile, 3 on Tablet, 4 on Desktop */}
