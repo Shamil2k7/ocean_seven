@@ -330,6 +330,39 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
+/* =========================================================
+   CATEGORY SECTION - CONTINUOUS INFINITE SCROLLING ANIMATION
+   ========================================================= */
+@keyframes categoryMarqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.category-marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: flex-start;
+  animation: categoryMarqueeScroll 42s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover (Desktop) and on active touch press (Mobile) */
+.category-marquee-container:hover .category-marquee-track,
+.category-marquee-container:active .category-marquee-track,
+.category-marquee-container.is-paused .category-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 640px) {
+  .category-marquee-track {
+    animation-duration: 34s;
+  }
+}
+
 /* 8. Scroll-Based Reveal Animation (800ms–1200ms smooth reveal) */
 .reveal-on-scroll {
   opacity: 0;
@@ -399,6 +432,10 @@ body {
     opacity: var(--slide-opacity, 0.12) !important;
     transform: none !important;
     transition: none !important;
+  }
+  .category-marquee-track {
+    animation: none !important;
+    transform: none !important;
   }
   .product-card-hover:hover {
     transform: none !important;
