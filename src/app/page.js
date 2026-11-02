@@ -4,10 +4,7 @@ import HomeShowcase from "@/components/HomeShowcase";
 import InnovationServices from "@/components/InnovationServices";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CompanyStats from "@/components/CompanyStats";
-import BrandShowcase from "@/components/BrandShowcase";
-import GlobalDistribution from "@/components/GlobalDistribution";
 import Certifications from "@/components/Certifications";
-import NewsSection from "@/components/NewsSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function HomePage() {
@@ -31,17 +28,8 @@ export default function HomePage() {
       {/* Operational Scope */}
       <CompanyStats />
 
-      {/* Commercial Supply Lines */}
-      <BrandShowcase />
-
-      {/* Global Trading Corridors */}
-      <GlobalDistribution />
-
       {/* Quality Standards & Handling */}
       <Certifications />
-
-      {/* Trade Insights & Articles */}
-      <NewsSection limit={3} title="Industry Insights & Articles" />
 
       {/* Contact & Official Address */}
       <ContactSection />
