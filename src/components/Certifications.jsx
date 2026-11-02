@@ -1,32 +1,44 @@
 "use client";
 
-import { ShieldCheck, ThermometerSnowflake, FileCheck, CheckCircle2, Award } from "lucide-react";
+import { ShieldCheck, ThermometerSnowflake, FileCheck, CheckCircle2 } from "lucide-react";
 import UnderwaterAmbient from "./UnderwaterAmbient";
-
-const commitments = [
-  {
-    title: "Cold Chain Assurance",
-    description: "Strict temperature control throughout landing, transit, and customer delivery.",
-    icon: ThermometerSnowflake,
-  },
-  {
-    title: "Freshness & Grading",
-    description: "Systematic sorting, size calibration, and freshness checks before dispatch.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Traceability & Origin",
-    description: "Clear origin verification and full batch documentation for wholesale transparency.",
-    icon: FileCheck,
-  },
-  {
-    title: "Regulatory Compliance",
-    description: "Committed to following Saudi Food and Drug Authority (SFDA) standards and industry best practices.",
-    icon: CheckCircle2,
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Certifications() {
+  const { lang, isRTL } = useLanguage();
+  const isArabic = lang === "ar";
+
+  const commitments = [
+    {
+      title: isArabic ? "ضمان سلسلة التبريد" : "Cold Chain Assurance",
+      description: isArabic
+        ? "تحكم صارم في درجات الحرارة طوال عمليات الإنزال والشحن البري والجوي والتسليم النهائي."
+        : "Strict temperature control throughout landing, transit, and customer delivery.",
+      icon: ThermometerSnowflake,
+    },
+    {
+      title: isArabic ? "معايير الطزاجة والفرز" : "Freshness & Grading",
+      description: isArabic
+        ? "فرز منهجي، ومعايرة دقيقة للأحجام، وفحص شامل لمستويات الطزاجة قبل التحميل والتوزيع."
+        : "Systematic sorting, size calibration, and freshness checks before dispatch.",
+      icon: ShieldCheck,
+    },
+    {
+      title: isArabic ? "التتبع وشهادات المنشأ" : "Traceability & Origin",
+      description: isArabic
+        ? "تحقق واضح من المنشأ ووثائق كاملة لكل دفعة لضمان أقصى درجات الشفافية لتجارة الجملة."
+        : "Clear origin verification and full batch documentation for wholesale transparency.",
+      icon: FileCheck,
+    },
+    {
+      title: isArabic ? "الامتثال التنظيمي" : "Regulatory Compliance",
+      description: isArabic
+        ? "الالتزام التام باشتراطات الهيئة العامة للغذاء والدواء (SFDA) وأفضل الممارسات الدولية."
+        : "Committed to following Saudi Food and Drug Authority (SFDA) standards and industry best practices.",
+      icon: CheckCircle2,
+    },
+  ];
+
   return (
     <section className="relative overflow-hidden py-16 lg:py-20 bg-surface border-b border-border">
       {/* Subtle Ocean Background Animation & Sliding Ocean Imagery */}
@@ -39,8 +51,8 @@ export default function Certifications() {
         showRays={true}
         slidingImage={{
           src: "/images/hero/deep-underwater.jpg",
-          alt: "Deep underwater ocean background",
-          position: "right",
+          alt: isArabic ? "أعماق مياه المحيط" : "Deep underwater ocean background",
+          position: isRTL ? "left" : "right",
           opacity: 0.08,
         }}
       />
@@ -50,13 +62,17 @@ export default function Certifications() {
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <span className="text-xs uppercase tracking-widest font-heading font-semibold text-ocean block mb-1">
-            Quality Commitment
+            {isArabic ? "التزامنا بالجودة" : "Quality Commitment"}
           </span>
           <h2 className="font-heading font-semibold text-2xl sm:text-3xl text-charcoal tracking-tight">
-            Quality Standards & Handling Protocols
+            {isArabic
+              ? "معايير الجودة وبروتوكولات مناولة المأكولات البحرية"
+              : "Quality Standards & Handling Protocols"}
           </h2>
           <p className="mt-2 text-muted text-xs sm:text-sm leading-relaxed">
-            At Ocean Seven Seafood Trading Company, quality is maintained through careful partner selection, strict cold-chain practices, and dedicated handling standards.
+            {isArabic
+              ? "في شركة أوشن سفن لتجارة المأكولات البحرية، نحافظ على أعلى معايير الجودة عبر الاختيار الدقيق للمصائد، وتطبيق بروتوكولات التبريد الصارمة، والالتزام بمعايير المناولة المعتمدة."
+              : "At Ocean Seven Seafood Trading Company, quality is maintained through careful partner selection, strict cold-chain practices, and dedicated handling standards."}
           </p>
         </div>
 
@@ -87,10 +103,10 @@ export default function Certifications() {
 
         {/* Quality Banner */}
         <div className="mt-8 p-4 rounded-xs bg-white border border-border flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-semibold text-charcoal">
-          <span>✓ Temperature-Controlled Storage</span>
-          <span>✓ Batch Traceability</span>
-          <span>✓ Food Safety Protocols</span>
-          <span>✓ Professional Trading Integrity</span>
+          <span>{isArabic ? "✓ تخزين مبرد ومراقب حرارياً" : "✓ Temperature-Controlled Storage"}</span>
+          <span>{isArabic ? "✓ تتبع كامل للشحنات والدفعات" : "✓ Batch Traceability"}</span>
+          <span>{isArabic ? "✓ بروتوكولات معتمدة لسلامة الغذاء" : "✓ Food Safety Protocols"}</span>
+          <span>{isArabic ? "✓ نزاهة وموثوقية في التجارة" : "✓ Professional Trading Integrity"}</span>
         </div>
 
       </div>

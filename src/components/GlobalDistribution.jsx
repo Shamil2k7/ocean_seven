@@ -2,34 +2,71 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Check, MapPin, Globe } from "lucide-react";
-
-const regions = [
-  {
-    name: "Jeddah & Saudi Arabia",
-    status: "Headquarters & Primary Trading Market",
-    description: "Centrally based in Jeddah, Ash Sharafiyah District, serving wholesale fish markets, hotel chains, supermarket counters, and regional food distributors across Saudi Arabia.",
-    coords: { x: "55%", y: "45%" },
-    channels: ["Local Market Trading", "Hotels & Restaurants", "Supermarket Supply", "Regional Logistics"],
-  },
-  {
-    name: "Red Sea & Regional Waters",
-    status: "Coastal Sourcing Network",
-    description: "Connecting with coastal fishing communities and landing ports for fresh daily catch including Hamour, King Fish, and regional pelagic species.",
-    coords: { x: "53%", y: "48%" },
-    channels: ["Harbor Procurement", "Chilled Handling", "Daily Transport", "Species Grading"],
-  },
-  {
-    name: "International Sourcing Corridors",
-    status: "Global Trade Connections",
-    description: "Engaging dependable seafood producers in Europe, Asia, and other marine regions for imported salmon, tuna, shrimp, and specialty frozen items.",
-    coords: { x: "45%", y: "30%" },
-    channels: ["Commercial Import Trading", "Refrigerated Air & Sea Cargo", "Port Logistics", "Batch Verification"],
-  },
-];
+import { Check } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function GlobalDistribution() {
-  const [activeRegion, setActiveRegion] = useState(regions[0]);
+  const { lang, isRTL, t } = useLanguage();
+  const isArabic = lang === "ar";
+
+  const regionsEn = [
+    {
+      id: "jeddah",
+      name: "Jeddah & Saudi Arabia",
+      status: "Headquarters & Primary Trading Market",
+      description: "Centrally based in Jeddah, Ash Sharafiyah District, serving wholesale fish markets, hotel chains, supermarket counters, and regional food distributors across Saudi Arabia.",
+      coords: { x: "55%", y: "45%" },
+      channels: ["Local Market Trading", "Hotels & Restaurants", "Supermarket Supply", "Regional Logistics"],
+    },
+    {
+      id: "redsea",
+      name: "Red Sea & Regional Waters",
+      status: "Coastal Sourcing Network",
+      description: "Connecting with coastal fishing communities and landing ports for fresh daily catch including Hamour, King Fish, and regional pelagic species.",
+      coords: { x: "53%", y: "48%" },
+      channels: ["Harbor Procurement", "Chilled Handling", "Daily Transport", "Species Grading"],
+    },
+    {
+      id: "global",
+      name: "International Sourcing Corridors",
+      status: "Global Trade Connections",
+      description: "Engaging dependable seafood producers in Europe, Asia, and other marine regions for imported salmon, tuna, shrimp, and specialty frozen items.",
+      coords: { x: "45%", y: "30%" },
+      channels: ["Commercial Import Trading", "Refrigerated Air & Sea Cargo", "Port Logistics", "Batch Verification"],
+    },
+  ];
+
+  const regionsAr = [
+    {
+      id: "jeddah",
+      name: "جدة والمملكة العربية السعودية",
+      status: "المقر الرئيسي وسوق التجارة الأساسي",
+      description: "انطلاقاً من المقر الرئيسي في حي الشرفية بجدة، نخدم أسواق الجملة المركزية، وسلاسل الفنادق، وأقسام الأسماك في السوبرماركت، والموزعين الإقليميين في كافة مناطق المملكة.",
+      coords: { x: "55%", y: "45%" },
+      channels: ["تجارة الأسواق المحلية", "الفنادق والمطاعم الراقية", "توريد سلاسل التجزئة", "اللوجستيات الإقليمية المبردة"],
+    },
+    {
+      id: "redsea",
+      name: "البحر الأحمر والمياه الإقليمية",
+      status: "شبكة التوريد الساحلي المباشر",
+      description: "الربط المباشر مع مجتمعات الصيد الساحلية وموانئ الإنزال لتوريد الصيد اليومي الطازج مثل الهامور والكنعد والأنواع الأوقيانوسية.",
+      coords: { x: "53%", y: "48%" },
+      channels: ["الشراء المباشر من المرافئ", "الحفظ المبرد على الثلج", "النقل والتوزيع اليومي", "فرز ومعايرة الأنواع"],
+    },
+    {
+      id: "global",
+      name: "ممرات التوريد الدولية",
+      status: "روابط التجارة البحرية العالمية",
+      description: "التعاون مع كبار منتجي المأكولات البحرية المعتمدين في أوروبا وآسيا ومصائد العالم لاستيراد السلمون والتونة والروبيان والأصناف المجمدة التخصصية.",
+      coords: { x: "45%", y: "30%" },
+      channels: ["استيراد وتجارة المأكولات البحرية", "شحن بحري وجوي مبرد", "الخدمات اللوجستية في الموانئ", "فحص واعتماد الدفعات والشحنات"],
+    },
+  ];
+
+  const regions = isArabic ? regionsAr : regionsEn;
+  const [selectedId, setSelectedId] = useState("jeddah");
+
+  const activeRegion = regions.find((r) => r.id === selectedId) || regions[0];
 
   return (
     <section className="py-20 lg:py-28 bg-white border-b border-border">
@@ -38,13 +75,17 @@ export default function GlobalDistribution() {
         {/* Section Heading */}
         <div className="max-w-3xl mb-12">
           <span className="text-xs uppercase tracking-widest font-heading font-semibold text-ocean block mb-2">
-            Trading Corridors
+            {isArabic ? "الممرات التجارية" : "Trading Corridors"}
           </span>
           <h2 className="font-heading font-semibold text-2xl sm:text-3xl lg:text-4xl text-charcoal tracking-tight">
-            Connecting Regional Sourcing with Global Trade
+            {isArabic
+              ? "ربط التوريد الإقليمي بالتجارة البحرية العالمية"
+              : "Connecting Regional Sourcing with Global Trade"}
           </h2>
           <p className="mt-3 text-muted text-sm sm:text-base leading-relaxed">
-            Operating from Jeddah, Kingdom of Saudi Arabia, Ocean Seven connects local seafood markets with trusted international producers.
+            {isArabic
+              ? "انطلاقاً من مدينة جدة في المملكة العربية السعودية، تربط أوشن سفن أسواق المأكولات البحرية المحلية بكبار المنتجين والمصائد العالمية المعتمدة."
+              : "Operating from Jeddah, Kingdom of Saudi Arabia, Ocean Seven connects local seafood markets with trusted international producers."}
           </p>
         </div>
 
@@ -57,7 +98,7 @@ export default function GlobalDistribution() {
               <svg
                 viewBox="0 0 1000 500"
                 className="w-full h-full text-border fill-current"
-                aria-label="Trading and distribution map"
+                aria-label={isArabic ? "خريطة التجارة والتوزيع" : "Trading and distribution map"}
               >
                 {/* Continents */}
                 <path d="M120,80 Q160,70 240,90 Q280,120 270,180 Q240,220 200,240 Q170,220 140,160 Z" />
@@ -80,12 +121,12 @@ export default function GlobalDistribution() {
 
               {/* Location Pins */}
               {regions.map((reg) => {
-                const isSelected = activeRegion.name === reg.name;
+                const isSelected = activeRegion.id === reg.id;
                 return (
                   <button
-                    key={reg.name}
+                    key={reg.id}
                     type="button"
-                    onClick={() => setActiveRegion(reg)}
+                    onClick={() => setSelectedId(reg.id)}
                     style={{ left: reg.coords.x, top: reg.coords.y }}
                     className={`absolute -translate-x-1/2 -translate-y-1/2 px-2 py-0.5 rounded-xs text-[10px] tracking-wider uppercase font-semibold transition-colors z-20 ${
                       isSelected
@@ -100,8 +141,14 @@ export default function GlobalDistribution() {
             </div>
 
             <div className="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-muted">
-              <span>Jeddah, Saudi Arabia • Maritime & Air Corridors</span>
-              <span className="text-ocean font-medium">Select to view trading scope</span>
+              <span>
+                {isArabic
+                  ? "جدة، المملكة العربية السعودية • ممرات التجارة الجوية والبحرية"
+                  : "Jeddah, Saudi Arabia • Maritime & Air Corridors"}
+              </span>
+              <span className="text-ocean font-medium">
+                {isArabic ? "انقر لعرض نطاق العمليات" : "Select to view trading scope"}
+              </span>
             </div>
           </div>
 
@@ -109,7 +156,7 @@ export default function GlobalDistribution() {
           <div className="lg:col-span-4 bg-surface border border-border p-6 rounded-xs flex flex-col justify-between">
             <div>
               <span className="text-[10px] uppercase tracking-wider text-muted font-semibold block mb-1">
-                Trading Scope
+                {isArabic ? "نطاق العمليات التجارية" : "Trading Scope"}
               </span>
               <h3 className="font-heading font-semibold text-2xl text-charcoal mb-0.5">
                 {activeRegion.name}
@@ -124,7 +171,7 @@ export default function GlobalDistribution() {
 
               <div className="space-y-2 border-t border-border pt-4">
                 <span className="text-[11px] uppercase tracking-wider text-charcoal font-semibold block">
-                  Key Capabilities:
+                  {isArabic ? "أبرز الإمكانيات والخدمات:" : "Key Capabilities:"}
                 </span>
                 {activeRegion.channels.map((ch, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-xs text-charcoal">
@@ -140,7 +187,7 @@ export default function GlobalDistribution() {
                 href="/contact"
                 className="w-full py-2.5 bg-navy hover:bg-ocean text-white text-xs uppercase tracking-wider font-semibold text-center block rounded-xs transition-colors"
               >
-                Inquire With Our Team
+                {isArabic ? "تواصل مع فريقنا التجاري" : "Inquire With Our Team"}
               </Link>
             </div>
           </div>

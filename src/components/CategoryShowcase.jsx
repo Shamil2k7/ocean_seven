@@ -4,10 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import categoriesData from "@/data/categories.json";
+import { useLanguage } from "@/context/LanguageContext";
 
 const ALL_CATEGORY = {
   id: "all",
   name: "All",
+  name_ar: "الكل",
   slug: "All",
   count: 59,
   image: "/images/editorial/fresh-catch.jpg",
@@ -20,35 +22,40 @@ const trackItems = [...baseCategories, ...baseCategories];
 
 export default function CategoryShowcase({ onSelectCategory, activeCategory = "All" }) {
   const [isPaused, setIsPaused] = useState(false);
+  const { lang, isRTL, t } = useLanguage();
 
   // Normalize comparison to match category accurately across both tracks
   const isSelected = (cat) => {
     if (!activeCategory) return cat.id === "all";
     const current = activeCategory.trim().toLowerCase();
     const name = cat.name.trim().toLowerCase();
+    const nameAr = cat.name_ar?.trim().toLowerCase();
     const id = cat.id.trim().toLowerCase();
     const alias = cat.alias?.trim().toLowerCase();
 
-    if (current === "all" && (name === "all" || id === "all")) return true;
-    if (name === current || id === current) return true;
+    if ((current === "all" || current === "الكل") && (name === "all" || id === "all")) return true;
+    if (name === current || id === current || (nameAr && nameAr === current)) return true;
     if (alias && alias === current) return true;
 
     // Cross-match Seafood Products and Value Added Seafood
     if (current === "seafood products" && (name.includes("value added") || id.includes("value-added"))) return true;
     if (current === "value added seafood" && (name.includes("seafood products") || id.includes("seafood-products"))) return true;
+    if (current === "منتجات المأكولات البحرية" && (id.includes("seafood-products") || name.includes("value added"))) return true;
 
     return false;
   };
 
-  const handleSelect = (categoryName) => {
+  const handleSelect = (category) => {
     if (onSelectCategory) {
-      onSelectCategory(categoryName);
+      // Pass the canonical category name or Arabic name depending on current mode
+      onSelectCategory(category.name);
     }
   };
 
   // Render an individual category item
   const renderItem = (category, uniqueKey, isAriaHidden = false) => {
     const active = isSelected(category);
+    const displayName = (lang === "ar" && category.name_ar) ? category.name_ar : category.name;
 
     const itemContent = (
       <div className="group flex flex-col items-center text-center shrink-0 cursor-pointer w-[72px] sm:w-[82px] lg:w-[90px] transition-transform duration-200 hover:-translate-y-0.5">
@@ -62,7 +69,7 @@ export default function CategoryShowcase({ onSelectCategory, activeCategory = "A
         >
           <Image
             src={category.image}
-            alt={category.name}
+            alt={displayName}
             fill
             sizes="(max-width: 640px) 56px, (max-width: 1024px) 62px, 66px"
             className="object-cover object-center w-full h-full rounded-full transition-transform duration-300 group-hover:scale-108"
@@ -77,7 +84,7 @@ export default function CategoryShowcase({ onSelectCategory, activeCategory = "A
               : "text-[#101F46] font-medium group-hover:text-[#1684C6]"
           }`}
         >
-          {category.name}
+          {displayName}
         </span>
       </div>
     );
@@ -87,7 +94,7 @@ export default function CategoryShowcase({ onSelectCategory, activeCategory = "A
         <button
           key={uniqueKey}
           type="button"
-          onClick={() => handleSelect(category.name)}
+          onClick={() => handleSelect(category)}
           aria-pressed={active}
           tabIndex={isAriaHidden ? -1 : 0}
           className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1684C6] rounded-full shrink-0"
@@ -116,7 +123,7 @@ export default function CategoryShowcase({ onSelectCategory, activeCategory = "A
   return (
     <nav
       id="categories"
-      aria-label="Seafood categories"
+      aria-label={t.categories.title}
       className="relative bg-[#F8F8F5] border-y border-[#E2E8F0] py-5 sm:py-6 lg:py-7 transition-colors select-none overflow-hidden"
     >
       {/* Left & Right Subtle Soft Gradient Fade Overlays for seamless edge transitions */}
@@ -132,7 +139,7 @@ export default function CategoryShowcase({ onSelectCategory, activeCategory = "A
         onTouchEnd={() => setIsPaused(false)}
       >
         {/* Track 1: Primary Loop Track */}
-        <div className="category-marquee-track gap-4 sm:gap-6 lg:gap-7 xl:gap-8 pr-4 sm:pr-6 lg:pr-7 xl:pr-8">
+        <div className="category-marquee-track gap-4 sm:gap-6 lg:gap-7 xl:gap-8 pr-4 sm:pr-6 lg:pr-7 xl:pr-8 rtl:pr-0 rtl:pl-4 rtl:sm:pl-6 rtl:lg:pl-7 rtl:xl:pl-8">
           {trackItems.map((category, idx) =>
             renderItem(category, `track1-${category.id}-${idx}`, false)
           )}
@@ -140,7 +147,7 @@ export default function CategoryShowcase({ onSelectCategory, activeCategory = "A
 
         {/* Track 2: Secondary Identical Loop Track for Seamless Continuous Transition */}
         <div
-          className="category-marquee-track gap-4 sm:gap-6 lg:gap-7 xl:gap-8 pr-4 sm:pr-6 lg:pr-7 xl:pr-8"
+          className="category-marquee-track gap-4 sm:gap-6 lg:gap-7 xl:gap-8 pr-4 sm:pr-6 lg:pr-7 xl:pr-8 rtl:pr-0 rtl:pl-4 rtl:sm:pl-6 rtl:lg:pl-7 rtl:xl:pl-8"
           aria-hidden="true"
         >
           {trackItems.map((category, idx) =>

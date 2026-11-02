@@ -1,8 +1,9 @@
-import { Manrope, Inter } from "next/font/google";
+import { Manrope, Inter, IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollRevealProvider from "@/components/ScrollRevealProvider";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -15,6 +16,13 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ibm-plex-arabic",
   display: "swap",
 });
 
@@ -47,13 +55,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${inter.variable} ${ibmPlexArabic.variable}`}>
       <body className="font-sans bg-pearl text-charcoal min-h-screen flex flex-col antialiased selection:bg-ocean selection:text-white">
-        <ScrollRevealProvider>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </ScrollRevealProvider>
+        <LanguageProvider>
+          <ScrollRevealProvider>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </ScrollRevealProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

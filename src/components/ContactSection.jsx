@@ -6,20 +6,22 @@ import {
   Send, 
   CheckCircle2, 
   Building2, 
-  Mail, 
   Clock, 
-  MessageSquare,
   ShieldCheck 
 } from "lucide-react";
 import UnderwaterAmbient from "./UnderwaterAmbient";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactSection() {
+  const { lang, isRTL } = useLanguage();
+  const isArabic = lang === "ar";
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
     company: "",
-    productInterest: "General Wholesale Supply",
+    productInterest: isArabic ? "توريد جملة عام" : "General Wholesale Supply",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -41,8 +43,8 @@ export default function ContactSection() {
         showRays={true}
         slidingImage={{
           src: "/images/editorial/local-waters.jpg",
-          alt: "Coastal water atmosphere",
-          position: "right",
+          alt: isArabic ? "المياه الساحلية" : "Coastal water atmosphere",
+          position: isRTL ? "left" : "right",
           opacity: 0.08,
         }}
       />
@@ -52,13 +54,17 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <span className="text-xs uppercase tracking-widest font-heading font-semibold text-ocean block mb-2">
-            Get In Touch
+            {isArabic ? "تواصل معنا" : "Get In Touch"}
           </span>
           <h2 className="font-heading font-semibold text-2xl sm:text-3xl lg:text-4xl text-charcoal tracking-tight">
-            Contact Ocean Seven Seafood Trading Company
+            {isArabic
+              ? "اتصل بشركة أوشن سفن لتجارة المأكولات البحرية"
+              : "Contact Ocean Seven Seafood Trading Company"}
           </h2>
           <p className="mt-2 text-muted text-sm sm:text-base leading-relaxed">
-            Reach out to our trading team in Jeddah, Saudi Arabia to discuss seafood sourcing, regular commercial supplies, or product specifications.
+            {isArabic
+              ? "تواصل مع فريق التجارة والتعاقدات في جدة، المملكة العربية السعودية لمناقشة توريد المأكولات البحرية، أو العقود الدورية، أو المواصفات الفنية للمنتجات."
+              : "Reach out to our trading team in Jeddah, Saudi Arabia to discuss seafood sourcing, regular commercial supplies, or product specifications."}
           </p>
         </div>
 
@@ -71,10 +77,18 @@ export default function ContactSection() {
               <div className="py-10 text-center space-y-3">
                 <CheckCircle2 className="w-12 h-12 text-ocean mx-auto" />
                 <h3 className="font-heading font-semibold text-xl text-charcoal">
-                  Inquiry Dispatched Successfully
+                  {isArabic ? "تم إرسال طلبكم بنجاح" : "Inquiry Dispatched Successfully"}
                 </h3>
                 <p className="text-xs sm:text-sm text-muted max-w-md mx-auto leading-relaxed">
-                  Thank you, <span className="font-semibold text-charcoal">{formData.fullName}</span>. Our team at Ocean Seven Seafood Trading Company has received your inquiry and will contact you promptly.
+                  {isArabic ? (
+                    <>
+                      شكراً لكم، <span className="font-semibold text-charcoal">{formData.fullName}</span>. لقد استلم فريقنا في شركة أوشن سفن لتجارة المأكولات البحرية طلبكم وسيتواصل معكم في أقرب وقت.
+                    </>
+                  ) : (
+                    <>
+                      Thank you, <span className="font-semibold text-charcoal">{formData.fullName}</span>. Our team at Ocean Seven Seafood Trading Company has received your inquiry and will contact you promptly.
+                    </>
+                  )}
                 </p>
                 <button
                   type="button"
@@ -85,35 +99,37 @@ export default function ContactSection() {
                       email: "",
                       phone: "",
                       company: "",
-                      productInterest: "General Wholesale Supply",
+                      productInterest: isArabic ? "توريد جملة عام" : "General Wholesale Supply",
                       message: "",
                     });
                   }}
                   className="mt-4 px-4 py-2 bg-navy text-white text-xs uppercase tracking-wider font-semibold rounded-xs"
                 >
-                  Send Another Inquiry
+                  {isArabic ? "إرسال استفسار آخر" : "Send Another Inquiry"}
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="border-b border-border pb-3 mb-1">
                   <h3 className="font-heading font-semibold text-lg text-charcoal">
-                    Commercial Sourcing Request
+                    {isArabic ? "طلب توريد تجاري" : "Commercial Sourcing Request"}
                   </h3>
                   <p className="text-xs text-muted mt-0.5">
-                    Submit your requirements below for supply availability, cuts, and scheduling.
+                    {isArabic
+                      ? "أدخل تفاصيل ومتطلبات التوريد أدناه للتحقق من الكميات المتوفرة، وطريقة التقطيع، وجدولة الشحن."
+                      : "Submit your requirements below for supply availability, cuts, and scheduling."}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs uppercase tracking-wider font-semibold text-charcoal mb-1">
-                      Full Name *
+                      {isArabic ? "الاسم الكامل *" : "Full Name *"}
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="Your name"
+                      placeholder={isArabic ? "مثال: عبد الله العتيبي" : "Your name"}
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       className="w-full px-3.5 py-2 text-xs bg-surface border border-border rounded-xs text-charcoal focus:outline-none focus:border-ocean"
@@ -122,12 +138,12 @@ export default function ContactSection() {
 
                   <div>
                     <label className="block text-xs uppercase tracking-wider font-semibold text-charcoal mb-1">
-                      Company / Organization *
+                      {isArabic ? "اسم الشركة / المؤسسة *" : "Company / Organization *"}
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="Business / Entity name"
+                      placeholder={isArabic ? "اسم الشركة أو المنشأة التجارية" : "Business / Entity name"}
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="w-full px-3.5 py-2 text-xs bg-surface border border-border rounded-xs text-charcoal focus:outline-none focus:border-ocean"
@@ -138,58 +154,77 @@ export default function ContactSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs uppercase tracking-wider font-semibold text-charcoal mb-1">
-                      Email Address *
+                      {isArabic ? "البريد الإلكتروني للعمل *" : "Email Address *"}
                     </label>
                     <input
                       type="email"
                       required
-                      placeholder="your@email.com"
+                      placeholder="name@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2 text-xs bg-surface border border-border rounded-xs text-charcoal focus:outline-none focus:border-ocean"
+                      className="w-full px-3.5 py-2 text-xs bg-surface border border-border rounded-xs text-charcoal focus:outline-none focus:border-ocean text-start"
+                      dir="ltr"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs uppercase tracking-wider font-semibold text-charcoal mb-1">
-                      Contact Phone *
+                      {isArabic ? "رقم الهاتف / الجوال *" : "Contact Phone *"}
                     </label>
                     <input
                       type="tel"
                       required
-                      placeholder="Phone or WhatsApp"
+                      placeholder="+966 5X XXX XXXX"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3.5 py-2 text-xs bg-surface border border-border rounded-xs text-charcoal focus:outline-none focus:border-ocean font-mono"
+                      className="w-full px-3.5 py-2 text-xs bg-surface border border-border rounded-xs text-charcoal focus:outline-none focus:border-ocean font-mono text-start"
+                      dir="ltr"
                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-xs uppercase tracking-wider font-semibold text-charcoal mb-1">
-                    Seafood Category of Interest
+                    {isArabic ? "صنف المأكولات البحرية المطلوب" : "Seafood Category of Interest"}
                   </label>
                   <select
                     value={formData.productInterest}
                     onChange={(e) => setFormData({ ...formData, productInterest: e.target.value })}
                     className="w-full px-3.5 py-2 text-xs bg-surface border border-border rounded-xs text-charcoal focus:outline-none focus:border-ocean"
                   >
-                    <option value="General Wholesale Supply">General Wholesale Supply</option>
-                    <option value="Regional Coastal Catch (Hamour, King Fish, Pomfret)">Regional Coastal Catch (Hamour, King Fish, Pomfret)</option>
-                    <option value="Imported Pelagic Finfish (Salmon, Tuna, Cod)">Imported Pelagic Finfish (Salmon, Tuna, Cod)</option>
-                    <option value="Shrimp & Crustaceans">Shrimp & Crustaceans</option>
-                    <option value="Cephalopods & Shellfish">Cephalopods & Shellfish</option>
-                    <option value="Foodservice & Commercial Contracts">Foodservice & Commercial Contracts</option>
+                    {isArabic ? (
+                      <>
+                        <option value="توريد جملة عام">توريد جملة عام</option>
+                        <option value="الإنزال الساحلي الإقليمي (هامور، كنعد، زبيدي)">الإنزال الساحلي الإقليمي (هامور، كنعد، زبيدي)</option>
+                        <option value="الأسماك الأوقيانوسية المستوردة (سلمون، تونة، كود)">الأسماك الأوقيانوسية المستوردة (سلمون، تونة، كود)</option>
+                        <option value="الروبيان والجمبري والقشريات">الروبيان والجمبري والقشريات</option>
+                        <option value="الرخويات والحبار والمحاريات">الرخويات والحبار والمحاريات</option>
+                        <option value="عقود الضيافة والفنادق وخدمات الأغذية">عقود الضيافة والفنادق وخدمات الأغذية</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="General Wholesale Supply">General Wholesale Supply</option>
+                        <option value="Regional Coastal Catch (Hamour, King Fish, Pomfret)">Regional Coastal Catch (Hamour, King Fish, Pomfret)</option>
+                        <option value="Imported Pelagic Finfish (Salmon, Tuna, Cod)">Imported Pelagic Finfish (Salmon, Tuna, Cod)</option>
+                        <option value="Shrimp & Crustaceans">Shrimp & Crustaceans</option>
+                        <option value="Cephalopods & Shellfish">Cephalopods & Shellfish</option>
+                        <option value="Foodservice & Commercial Contracts">Foodservice & Commercial Contracts</option>
+                      </>
+                    )}
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-xs uppercase tracking-wider font-semibold text-charcoal mb-1">
-                    Order Details & Estimated Volume
+                    {isArabic ? "تفاصيل الطلب والكميات التقديرية" : "Order Details & Estimated Volume"}
                   </label>
                   <textarea
                     rows={4}
-                    placeholder="Specify target species, required form (fresh/frozen/fillet), delivery destination, or volume..."
+                    placeholder={
+                      isArabic
+                        ? "حدد الأصناف المطلوبة، وطريقة التجهيز (طازج/مجمد/فيليه)، ومدينة التسليم، والكمية المقدرة..."
+                        : "Specify target species, required form (fresh/frozen/fillet), delivery destination, or volume..."
+                    }
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-3.5 py-2 text-xs bg-surface border border-border rounded-xs text-charcoal focus:outline-none focus:border-ocean"
@@ -200,8 +235,8 @@ export default function ContactSection() {
                   type="submit"
                   className="w-full py-3 bg-navy hover:bg-ocean text-white text-xs uppercase tracking-wider font-heading font-semibold rounded-xs transition-colors flex items-center justify-center gap-2"
                 >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>Transmit Sourcing Inquiry</span>
+                  <Send className="w-3.5 h-3.5 rtl:rotate-180" />
+                  <span>{isArabic ? "إرسال طلب التوريد التجاري" : "Transmit Sourcing Inquiry"}</span>
                 </button>
               </form>
             )}
@@ -214,13 +249,13 @@ export default function ContactSection() {
             <div className="bg-white p-7 rounded-xs border border-border space-y-4">
               <div>
                 <span className="text-[11px] uppercase tracking-wider text-ocean font-semibold block mb-1">
-                  Registered Commercial Address
+                  {isArabic ? "العنوان التجاري المسجل رسمياً" : "Registered Commercial Address"}
                 </span>
                 <h3 className="font-heading font-semibold text-xl text-charcoal">
                   Ocean Seven Seafood Trading Company
                 </h3>
                 <span className="text-xs text-muted block font-arabic mt-0.5">
-                  شركة اوشن سيفن سيفود تريدينغ
+                  شركة أوشن سفن لتجارة المأكولات البحرية
                 </span>
               </div>
 
@@ -229,9 +264,11 @@ export default function ContactSection() {
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-ocean shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-charcoal block">Location:</span>
+                    <span className="font-semibold text-charcoal block">
+                      {isArabic ? "الموقع الجغرافي:" : "Location:"}
+                    </span>
                     <span className="text-muted leading-relaxed">
-                      Jeddah, Kingdom of Saudi Arabia
+                      {isArabic ? "جدة، المملكة العربية السعودية" : "Jeddah, Kingdom of Saudi Arabia"}
                     </span>
                   </div>
                 </div>
@@ -239,14 +276,29 @@ export default function ContactSection() {
                 <div className="flex items-start gap-2.5 border-t border-border pt-2.5">
                   <Building2 className="w-4 h-4 text-ocean shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-charcoal block">Registered Address:</span>
+                    <span className="font-semibold text-charcoal block">
+                      {isArabic ? "العنوان الوطني المسجل:" : "Registered Address:"}
+                    </span>
                     <p className="text-muted leading-relaxed mt-0.5">
-                      Building No. 6684,<br />
-                      Khalid Ibn Al Waleed Street,<br />
-                      Ash Sharafiyah District,<br />
-                      Secondary Number 2661,<br />
-                      Postal Code 23216,<br />
-                      Jeddah, Kingdom of Saudi Arabia.
+                      {isArabic ? (
+                        <>
+                          مبنى رقم 6684،<br />
+                          شارع خالد بن الوليد،<br />
+                          حي الشرفية،<br />
+                          الرقم الفرعي 2661،<br />
+                          الرمز البريدي 23216،<br />
+                          جدة، المملكة العربية السعودية.
+                        </>
+                      ) : (
+                        <>
+                          Building No. 6684,<br />
+                          Khalid Ibn Al Waleed Street,<br />
+                          Ash Sharafiyah District,<br />
+                          Secondary Number 2661,<br />
+                          Postal Code 23216,<br />
+                          Jeddah, Kingdom of Saudi Arabia.
+                        </>
+                      )}
                     </p>
                   </div>
                 </div>
@@ -254,8 +306,12 @@ export default function ContactSection() {
                 <div className="flex items-center gap-2.5 border-t border-border pt-2.5">
                   <Clock className="w-4 h-4 text-ocean shrink-0" />
                   <div>
-                    <span className="font-semibold text-charcoal block">Business Operations:</span>
-                    <span className="text-muted">Sunday – Thursday: 08:00 – 17:00</span>
+                    <span className="font-semibold text-charcoal block">
+                      {isArabic ? "أوقات العمل التجارية:" : "Business Operations:"}
+                    </span>
+                    <span className="text-muted">
+                      {isArabic ? "الأحد – الخميس: 08:00 – 17:00" : "Sunday – Thursday: 08:00 – 17:00"}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -277,7 +333,11 @@ export default function ContactSection() {
 
               <div className="pt-2 text-[11px] text-muted flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-ocean" />
-                <span>Verified Commercial National Address • Jeddah, KSA</span>
+                <span>
+                  {isArabic
+                    ? "عنوان وطني تجاري موثق ومعتمد • جدة، المملكة العربية السعودية"
+                    : "Verified Commercial National Address • Jeddah, KSA"}
+                </span>
               </div>
             </div>
 

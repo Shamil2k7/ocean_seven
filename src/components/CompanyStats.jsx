@@ -1,41 +1,80 @@
 "use client";
 
 import { MapPin, Fish, Package, ShieldCheck, Globe2 } from "lucide-react";
-
-const pillars = [
-  {
-    icon: MapPin,
-    title: "Jeddah Headquarters",
-    subtitle: "Kingdom of Saudi Arabia",
-    description: "Ash Sharafiyah District, Khalid Ibn Al Waleed St.",
-  },
-  {
-    icon: Fish,
-    title: "Diverse Species",
-    subtitle: "Finfish, Shellfish & Cephalopods",
-    description: "Regional catch and imported commercial varieties",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Quality Focus",
-    subtitle: "Cold-Chain Integrity",
-    description: "Temperature-controlled handling and storage",
-  },
-  {
-    icon: Package,
-    title: "Wholesale Solutions",
-    subtitle: "Custom Commercial Supply",
-    description: "Serving foodservice, distributors, and retail",
-  },
-  {
-    icon: Globe2,
-    title: "Global Corridors",
-    subtitle: "Reliable Sourcing Networks",
-    description: "Connecting producers to customers in Saudi Arabia",
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function CompanyStats() {
+  const { lang, isRTL, t } = useLanguage();
+  const isArabic = lang === "ar";
+
+  const pillarsEn = [
+    {
+      icon: MapPin,
+      title: "Jeddah Headquarters",
+      subtitle: "Kingdom of Saudi Arabia",
+      description: "Ash Sharafiyah District, Khalid Ibn Al Waleed St.",
+    },
+    {
+      icon: Fish,
+      title: "Diverse Species",
+      subtitle: "Finfish, Shellfish & Cephalopods",
+      description: "Regional catch and imported commercial varieties",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Quality Focus",
+      subtitle: "Cold-Chain Integrity",
+      description: "Temperature-controlled handling and storage",
+    },
+    {
+      icon: Package,
+      title: "Wholesale Solutions",
+      subtitle: "Custom Commercial Supply",
+      description: "Serving foodservice, distributors, and retail",
+    },
+    {
+      icon: Globe2,
+      title: "Global Corridors",
+      subtitle: "Reliable Sourcing Networks",
+      description: "Connecting producers to customers in Saudi Arabia",
+    },
+  ];
+
+  const pillarsAr = [
+    {
+      icon: MapPin,
+      title: "المقر الرئيسي في جدة",
+      subtitle: "المملكة العربية السعودية",
+      description: "حي الشرفية، شارع خالد بن الوليد",
+    },
+    {
+      icon: Fish,
+      title: "تنوع بحري واسع",
+      subtitle: "أسماك زعانف، محاريات ورخويات",
+      description: "إنزال ساحلي إقليمي وأصناف تجارية عالمية",
+    },
+    {
+      icon: ShieldCheck,
+      title: "أولوية الجودة",
+      subtitle: "انضباط سلسلة التبريد",
+      description: "مناولة وتخزين بدرجات حرارة مراقبة",
+    },
+    {
+      icon: Package,
+      title: "حلول مبيعات الجملة",
+      subtitle: "توريد تجاري مخصص",
+      description: "خدمة قطاع الضيافة، الموزعين، والتجزئة",
+    },
+    {
+      icon: Globe2,
+      title: "ممرات تجارة عالمية",
+      subtitle: "شبكات توريد موثوقة",
+      description: "ربط المنتجين العالميين بالعملاء في المملكة",
+    },
+  ];
+
+  const pillars = isArabic ? pillarsAr : pillarsEn;
+
   return (
     <section className="py-16 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

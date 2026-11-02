@@ -6,22 +6,25 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
-  { name: "Products", href: "/products" },
-  { name: "Seafood Trading", href: "/trading" },
-  { name: "Quality", href: "/#quality" },
-  { name: "Contact", href: "/contact" },
-];
+import { useLanguage } from "@/context/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const { lang, isRTL, t } = useLanguage();
 
   const isHome = pathname === "/";
+
+  const navItems = [
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.about, href: "/about" },
+    { name: t.nav.products, href: "/products" },
+    { name: t.nav.trading, href: "/trading" },
+    { name: t.nav.quality, href: "/#quality" },
+    { name: t.nav.contact, href: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,15 +52,15 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             
-            {/* Ocean Seven Official Logo on Left */}
+            {/* Ocean Seven Official Logo */}
             <Link href="/" className="flex items-center gap-3 group focus:outline-none">
               <div className="relative h-10 sm:h-12 w-36 sm:w-44 flex items-center shrink-0">
                 <Image
                   src={isTransparent ? "/images/ocean-seven-logo-light.png" : "/images/ocean-seven-logo.png"}
-                  alt="Ocean Seven Seafood Trading Company"
+                  alt={t.footer.companyName}
                   width={180}
                   height={54}
-                  className="object-contain object-left h-full w-auto transition-opacity duration-200"
+                  className="object-contain h-full w-auto transition-opacity duration-200"
                   priority
                 />
               </div>
@@ -69,7 +72,7 @@ export default function Header() {
                 const isActive = pathname === item.href;
                 return (
                   <Link
-                    key={item.name}
+                    key={item.href}
                     href={item.href}
                     className={`text-xs font-heading font-medium tracking-wide transition-colors py-1 relative ${
                       isTransparent
@@ -87,8 +90,9 @@ export default function Header() {
               })}
             </nav>
 
-            {/* Right Action Button: Get in Touch */}
+            {/* Desktop Right Actions: Language Switcher & Quote CTA */}
             <div className="hidden lg:flex items-center gap-3">
+              <LanguageSwitcher isTransparent={isTransparent} />
               <Link
                 href="/contact"
                 className={`px-5 py-2 text-xs font-heading font-semibold rounded-full transition-all tracking-wide flex items-center gap-1.5 shadow-2xs ${
@@ -97,13 +101,14 @@ export default function Header() {
                     : "bg-navy hover:bg-ocean text-white"
                 }`}
               >
-                <span>Get in Touch</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <span>{t.nav.quoteBtn}</span>
+                <ArrowRight className="w-3.5 h-3.5 rtl:rotate-180" />
               </Link>
             </div>
 
-            {/* Mobile Circular Hamburger Button */}
-            <div className="flex lg:hidden items-center">
+            {/* Mobile Header Actions (Language Toggle + Hamburger) */}
+            <div className="flex lg:hidden items-center gap-2">
+              <LanguageSwitcher isTransparent={isTransparent} />
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -112,7 +117,7 @@ export default function Header() {
                     ? "border-white/40 text-white bg-white/5 active:bg-white/15"
                     : "border-border text-charcoal bg-surface active:bg-border"
                 }`}
-                aria-label="Toggle navigation menu"
+                aria-label={t.nav.menu}
               >
                 {mobileMenuOpen ? (
                   <X className="w-5 h-5" />
@@ -145,7 +150,7 @@ export default function Header() {
                 const isActive = pathname === item.href;
                 return (
                   <Link
-                    key={item.name}
+                    key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`text-sm font-heading font-medium py-1.5 flex items-center justify-between ${
@@ -153,21 +158,24 @@ export default function Header() {
                     }`}
                   >
                     <span>{item.name}</span>
-                    <ArrowRight className="w-4 h-4 text-muted" />
+                    <ArrowRight className="w-4 h-4 text-muted rtl:rotate-180" />
                   </Link>
                 );
               })}
             </div>
 
-            <div className="pt-4 flex flex-col gap-2 text-xs">
-              <span className="text-muted">Jeddah, Kingdom of Saudi Arabia</span>
+            <div className="pt-4 flex flex-col gap-3 text-xs">
+              <LanguageSwitcher isMobile={true} />
+              <span className="text-muted text-center sm:text-start">
+                {lang === "ar" ? "جدة والرياض، المملكة العربية السعودية" : "Jeddah & Riyadh, Kingdom of Saudi Arabia"}
+              </span>
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 bg-navy text-white text-center text-xs font-semibold rounded-xs tracking-wide mt-2 flex items-center justify-center gap-2"
+                className="w-full py-2.5 bg-navy hover:bg-ocean text-white text-center text-xs font-semibold rounded-full tracking-wide flex items-center justify-center gap-2 transition-colors"
               >
-                <span>Get in Touch</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <span>{t.nav.quoteBtn}</span>
+                <ArrowRight className="w-3.5 h-3.5 rtl:rotate-180" />
               </Link>
             </div>
           </motion.div>

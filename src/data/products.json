@@ -10,7 +10,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected seafood mix supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/seafood-mix.jpg",
-    "featured": true
+    "featured": true,
+    "name_ar": "مشكل مأكولات بحرية فاخر",
+    "category_ar": "منتجات المأكولات البحرية",
+    "status_ar": "مجمد / جاهز للطهي",
+    "form_ar": "مجهز / بالبقسماط / مدخن",
+    "storage_ar": "تجميد عميق (-18° مئوية أو أقل)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "تشكيلة مختارة بعناية من المأكولات البحرية من أوشن سفن، مخصصة لقطاع خدمات الأغذية، التجارة بالجملة، وتوريدات الضيافة في المملكة العربية السعودية."
   },
   {
     "id": "king-fish-steak",
@@ -23,7 +31,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected king fish steak supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/king-fish-steak.jpg",
-    "featured": true
+    "featured": true,
+    "name_ar": "ستيك سمك الكنعد",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "قطع ستيك سمك الكنعد المجمدة بالتجميد السريع، مثالية للشواء والطهي في الفنادق والمطاعم الراقية."
   },
   {
     "id": "sea-bass",
@@ -36,7 +52,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected sea bass supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/sea-bass.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك القاروص (سيباس)",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك قاروص طازج مبرد على الثلج، كامل منظف وخالٍ من الخياشيم والأحشاء، لتلبية أعلى معايير الطهي."
   },
   {
     "id": "crab-stick",
@@ -49,7 +73,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected crab stick supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/crab-stick.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "أصابع الكابوريا (كراب ستيك)",
+    "category_ar": "منتجات المأكولات البحرية",
+    "status_ar": "مجمد / جاهز للطهي",
+    "form_ar": "مجهز / بالبقسماط / مدخن",
+    "storage_ar": "تجميد عميق (-18° مئوية أو أقل)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "أصابع لحم الكابوريا الجاهزة للطهي والتقديم، مثالية لأطباق السوشي والسلطات الفاخرة."
   },
   {
     "id": "blue-fin-tuna",
@@ -62,7 +94,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected blue fin tuna supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/blue-fin-tuna.jpg",
-    "featured": true
+    "featured": true,
+    "name_ar": "تونة الزعنفة الزرقاء",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "تونة الزعنفة الزرقاء أوقيانوسية عالية الجودة بدرجة الساشيمي، محفوظة ومجمدة بأحدث التقنيات."
   },
   {
     "id": "breaded-squid-ring",
@@ -75,7 +115,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected breaded squid ring supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/breaded-squid-ring.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "حلقات حبار بالبقسماط (كلماري)",
+    "category_ar": "الحبار والسيبيا",
+    "status_ar": "مبرد / تجميد سريع فردي (IQF)",
+    "form_ar": "كامل منظف / حلقات كلماري / أنابيب حبار",
+    "storage_ar": "-18° مئوية أو مبرد على الثلج",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "حلقات حبار طرية مغطاة بخلطة بقسماط ذهبية مقرمشة، جاهزة للقلي السريع لخدمات المطاعم والضيافة."
   },
   {
     "id": "live-scallops",
@@ -88,7 +136,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected live scallops supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/live-scallops.jpg",
-    "featured": true
+    "featured": true,
+    "name_ar": "اسكالوب بحري حي",
+    "category_ar": "المحار والصدفيات",
+    "status_ar": "حي / مبرد / مجمد",
+    "form_ar": "كامل بالقشرة / نصف قشرة",
+    "storage_ar": "حي مبرد (0° مئوية إلى 4° مئوية) أو مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "اسكالوب طازج حي يتم توريده في قشرته الطبيعية، بطعم حلو وقوام ناعم لتجارب الطهي الراقية."
   },
   {
     "id": "cooked-octopus-tentacles",
@@ -101,7 +157,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected cooked octopus tentacles supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/cooked-octopus-tentacles.jpg",
-    "featured": true
+    "featured": true,
+    "name_ar": "أذرع أخطبوط مطهوة",
+    "category_ar": "الأخطبوط",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل منظف / أذرع مطهوة",
+    "storage_ar": "-18° مئوية أو مبرد على الثلج",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "أذرع أخطبوط طرية ومطهوة مسبقاً، مجمدة فردياً وجاهزة للتحمير والشواء الفوري."
   },
   {
     "id": "black-pomfret",
@@ -114,7 +178,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected black pomfret supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/black-pomfret.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك حلوايو أسود (بومفريت)",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك حلوايو أسود طازج كامل، يتميز بنكهته الغنية وقوامه المتماسك، مفضل في المطابخ الخليجية والآسيوية."
   },
   {
     "id": "dover-sole",
@@ -127,7 +199,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected dover sole supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/dover-sole.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك موسى (دوفر سول)",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك موسى دوفر الكلاسيكي بنكهته الرقيقة وقوامه الزبدي الفاخر، خيار الطهاة الأول في المطاعم الفاخرة."
   },
   {
     "id": "atlantic-mackarel",
@@ -140,7 +220,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected atlantic mackarel supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/atlantic-mackarel.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك الماكريل الأطلسي",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "ماكريل أطلسي غني بأوميغا 3 والدهون الصحية، مجمد سريعاً ومناسب للشواء والتدخين التجاري."
   },
   {
     "id": "razor-clams",
@@ -153,7 +241,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected razor clams supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/razor-clams.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "محار سكين البحر (ريزر كلامز)",
+    "category_ar": "المحار والصدفيات",
+    "status_ar": "حي / مبرد / مجمد",
+    "form_ar": "كامل بالقشرة / نصف قشرة",
+    "storage_ar": "حي مبرد (0° مئوية إلى 4° مئوية) أو مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "صدفيات سكين البحر الطازجة، محصودة من مياه ساحلية نقية، ذات مذاق بحري فريد وقوام مقرمش ناعم."
   },
   {
     "id": "sea-urchin",
@@ -166,7 +262,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected sea urchin supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/sea-urchin.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "قنفذ البحر (أوني)",
+    "category_ar": "المحار والصدفيات",
+    "status_ar": "حي / مبرد / مجمد",
+    "form_ar": "كامل بالقشرة / نصف قشرة",
+    "storage_ar": "حي مبرد (0° مئوية إلى 4° مئوية) أو مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "بطارخ قنفذ البحر الفاخرة المخصصة لمطاعم السوشي الراقية والطهي الياباني عالي المستوى."
   },
   {
     "id": "sea-bream",
@@ -179,7 +283,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected sea bream supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/sea-bream.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك الدنيس (سي بريم)",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك دنيس طازج كامل ومبرد على الثلج، قوام أبيض طري ونكهة بحرية معتدلة ولذيذة."
   },
   {
     "id": "cooked-whole-mussels",
@@ -192,7 +304,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected cooked whole mussels supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/cooked-whole-mussels.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "بلح بحر كامل مطهو",
+    "category_ar": "المحار والصدفيات",
+    "status_ar": "حي / مبرد / مجمد",
+    "form_ar": "كامل بالقشرة / نصف قشرة",
+    "storage_ar": "حي مبرد (0° مئوية إلى 4° مئوية) أو مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "بلح بحر كامل مطهو بالبخار ومجمد سريعاً في عصارته الطبيعية لضمان النكهة البحرية الأصلية."
   },
   {
     "id": "breaded-fish-fillet-formed",
@@ -205,7 +325,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected breaded fish fillet formed supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/breaded-fish-fillet-formed.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "فيليه سمك مقرمش مشكل بالبقسماط",
+    "category_ar": "منتجات المأكولات البحرية",
+    "status_ar": "مجمد / جاهز للطهي",
+    "form_ar": "مجهز / بالبقسماط / مدخن",
+    "storage_ar": "تجميد عميق (-18° مئوية أو أقل)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "قطع فيليه سمك مشكلة ومغطاة بفتات الخبز الذهبي المقرمش، سهلة وسريعة التحضير للبوفيهات والمطاعم."
   },
   {
     "id": "breaded-fish-fillet-natural",
@@ -218,7 +346,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected breaded fish fillet natural supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/breaded-fish-fillet-natural.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "فيليه سمك طبيعي بالبقسماط",
+    "category_ar": "منتجات المأكولات البحرية",
+    "status_ar": "مجمد / جاهز للطهي",
+    "form_ar": "مجهز / بالبقسماط / مدخن",
+    "storage_ar": "تجميد عميق (-18° مئوية أو أقل)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "فيليه سمك أبيض طبيعي 100% مغطى بطبقة بقسماط خفيفة مقرمشة، جودة ممتازة لقطاع الضيافة."
   },
   {
     "id": "breaded-torpedo-shrimps",
@@ -231,7 +367,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected breaded torpedo shrimps supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/breaded-torpedo-shrimps.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "روبيان توربيدو بالبقسماط",
+    "category_ar": "الروبيان والجمبري",
+    "status_ar": "مبرد / تجميد سريع فردي (IQF)",
+    "form_ar": "كامل بالرأس والقشرة / مقشر ومنظف / توربيدو",
+    "storage_ar": "-18° مئوية أو مبرد (0° مئوية إلى 2° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "روبيان مستقيم ومقشر ومغطى بطبقة بانكو يابانية مقرمشة، مثالي للمقبلات ووجبات الفنادق."
   },
   {
     "id": "breaded-butterfly-shrimps",
@@ -244,7 +388,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected breaded butterfly shrimps supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/breaded-butterfly-shrimps.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "روبيان فراشة مقرمش بالبقسماط",
+    "category_ar": "الروبيان والجمبري",
+    "status_ar": "مبرد / تجميد سريع فردي (IQF)",
+    "form_ar": "كامل بالرأس والقشرة / مقشر ومنظف / توربيدو",
+    "storage_ar": "-18° مئوية أو مبرد (0° مئوية إلى 2° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "روبيان مقطوع على شكل فراشة ومغطى بخلطة فتات الخبز الذهبي المقرمش، شكل جذاب ومذاق شهي."
   },
   {
     "id": "emperor-sheri",
@@ -257,7 +409,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected emperor (sheri) supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/emperor-sheri.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك شعري (شري)",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك شعري طازج كامل من الإنزال اليومي في الخليج والبحر الأحمر، قوام متماسك وطعم خليجي أصيل."
   },
   {
     "id": "argentinian-red-shrimps",
@@ -270,7 +430,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected argentinian red shrimps supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/argentinian-red-shrimps.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "روبيان أحمر أرجنتيني بري",
+    "category_ar": "الروبيان والجمبري",
+    "status_ar": "مبرد / تجميد سريع فردي (IQF)",
+    "form_ar": "كامل بالرأس والقشرة / مقشر ومنظف / توربيدو",
+    "storage_ar": "-18° مئوية أو مبرد (0° مئوية إلى 2° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "روبيان أحمر أرجنتيني بري مصطاد من المياه الباردة، بطعم يشبه الكركند ولون أحمر ياقوتي زاهي."
   },
   {
     "id": "white-pomfret",
@@ -283,7 +451,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected white pomfret supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/white-pomfret.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك زبيدي أبيض (بومفريت)",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك زبيدي أبيض طازج عالي القيمة، لحم أبيض ناصع ونكهة زبدية رقيقة لا تضاهى."
   },
   {
     "id": "atlantic-cod",
@@ -296,7 +472,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected atlantic cod supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/atlantic-cod.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك القد الأطلسي (كود)",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك القد الأطلسي المجمد، شرائح بيضاء متماسكة ومثالية لوجبات السمك والبطاطا والطهي بالفرن."
   },
   {
     "id": "sand-lobster",
@@ -309,7 +493,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected sand lobster supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/sand-lobster.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "كركند رملي (شروخة رملية)",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "كركند رملي طازج ومبرد، لحم ذيل ممتلئ ولذيذ مفضل في قوائم المأكولات البحرية المشوية."
   },
   {
     "id": "black-cod-h-l-gutted",
@@ -322,7 +514,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected black cod h/l gutted supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/black-cod-h-l-gutted.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك القد الأسود (بلاك كود / جندول)",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك القد الأسود منزوع الرأس والأحشاء، غني بالزيوت الطبيعية وقوام زبدي استثنائي لمطاعم النخبة."
   },
   {
     "id": "king-crab-cluster",
@@ -335,7 +535,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected king crab cluster supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/king-crab-cluster.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "أرجل سلطعون الكينغ كراب الملكي",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "مجموعات أرجل ومخالب كينغ كراب عملاقة مطبوخة ومجمدة سريعاً، لحم أبيض نقي ومذاق حلو فاخر."
   },
   {
     "id": "yellow-tail-hamachi",
@@ -348,7 +556,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected yellow tail hamachi supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/yellow-tail-hamachi.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك هاماتشي أصفر الذيل",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك هاماتشي ياباني فاخر بدرجة الساشيمي، محتوى دهني متوازن وملمس حريري رائع."
   },
   {
     "id": "hamour-whole",
@@ -361,7 +577,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected hamour whole supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/hamour-whole.png",
-    "featured": true
+    "featured": true,
+    "name_ar": "هامور بلدي كامل",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك هامور محلي طازج كامل، لحم متماسك وأبيض يعتبر الخيار الأول للولائم والمطابخ الخليجية."
   },
   {
     "id": "king-fish",
@@ -374,7 +598,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected king fish supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/king-fish.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك كنعد مبرد",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك كنعد مبرد على الثلج، يقطع حسب الطلب إلى ستيك أو فيليه لتجارة التجزئة والضيافة."
   },
   {
     "id": "langostine",
@@ -387,7 +619,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected langostine supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/langostine.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "لانجوستين نرويجي بري",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "لانجوستين بري من أعماق المحيط الأطلسي، طعم سكري رقيق ومظهر جذاب لأرقى المطاعم."
   },
   {
     "id": "king-fish-whole",
@@ -400,7 +640,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected king fish whole supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/king-fish-whole.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك كنعد كامل",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك كنعد كامل طازج من صيد الشواطئ الإقليمية، مثالي لمحلات الأسماك وسلاسل السوبرماركت."
   },
   {
     "id": "red-snapper-whole",
@@ -413,7 +661,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected red snapper whole supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/red-snapper-whole.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك نهاش أحمر (حمراء)",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك نهاش أحمر كامل مبرد، قشور حمراء لامعة ولحم أبيض حلو، مناسب للشواء في الفرن."
   },
   {
     "id": "shrimps-h-on-black-tiger",
@@ -426,7 +682,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected shrimps h on black tiger supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/shrimps-h-on-black-tiger.png",
-    "featured": true
+    "featured": true,
+    "name_ar": "روبيان النمر الأسود كامل بالرأس",
+    "category_ar": "الروبيان والجمبري",
+    "status_ar": "مبرد / تجميد سريع فردي (IQF)",
+    "form_ar": "كامل بالرأس والقشرة / مقشر ومنظف / توربيدو",
+    "storage_ar": "-18° مئوية أو مبرد (0° مئوية إلى 2° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "روبيان تايجر أسود كامل بالقشر والرأس، أحجام عملاقة ولحم مشدود ومقرمش."
   },
   {
     "id": "shrimps-pd-vannamai",
@@ -439,7 +703,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected shrimps pd vannamai supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/shrimps-pd-vannamai.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "روبيان فانامي مقشر ومنظف",
+    "category_ar": "الروبيان والجمبري",
+    "status_ar": "مبرد / تجميد سريع فردي (IQF)",
+    "form_ar": "كامل بالرأس والقشرة / مقشر ومنظف / توربيدو",
+    "storage_ar": "-18° مئوية أو مبرد (0° مئوية إلى 2° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "روبيان فانامي مقشر ومنزوع خيط الرمل (IQF)، يوفر وقت التحضير في المطابخ الاحترافية."
   },
   {
     "id": "tilapia-fillet",
@@ -452,7 +724,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected tilapia fillet supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/tilapia-fillet.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "فيليه سمك بلطي",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "شرائح فيليه سمك بلطي نظيفة منزوعة العظم والجلد، مجمدة فردياً بمقاسات متجانسة."
   },
   {
     "id": "tobiko-fying-fish-roe",
@@ -465,7 +745,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected tobiko (fying fish roe) supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/tobiko-fying-fish-roe.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "توبيكو (بطارخ السمك الطائر)",
+    "category_ar": "منتجات المأكولات البحرية",
+    "status_ar": "مجمد / جاهز للطهي",
+    "form_ar": "مجهز / بالبقسماط / مدخن",
+    "storage_ar": "تجميد عميق (-18° مئوية أو أقل)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "بيض سمك طائر مقرمش بألوان ونكهات متعددة لتزيين لفائف السوشي والمقبلات البحرية."
   },
   {
     "id": "halibut",
@@ -478,7 +766,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected halibut supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/halibut.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك الهلبوت الأطلسي ستيك وكامل",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / قطع عرضية",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك هلبوت أبيض كبير، متوفر قطع ستيك أو سمك كامل، قوام لحمي فاخر وقليل الدسم."
   },
   {
     "id": "oysters",
@@ -491,7 +787,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected oysters supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/oysters.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "محار حي في القشرة",
+    "category_ar": "المحار والصدفيات",
+    "status_ar": "حي / مبرد / مجمد",
+    "form_ar": "كامل بالقشرة / نصف قشرة",
+    "storage_ar": "حي مبرد (0° مئوية إلى 4° مئوية) أو مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "محار صخري حي مستورد من مزارع بحرية معتمدة، مذاق مالح منعش يقدم مباشرة مع الليمون."
   },
   {
     "id": "squid-ring",
@@ -504,7 +808,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected squid ring supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/squid-ring.png",
-    "featured": true
+    "featured": true,
+    "name_ar": "حلقات حبار كلماري طبيعية",
+    "category_ar": "الحبار والسيبيا",
+    "status_ar": "مبرد / تجميد سريع فردي (IQF)",
+    "form_ar": "كامل منظف / حلقات كلماري / أنابيب حبار",
+    "storage_ar": "-18° مئوية أو مبرد على الثلج",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "حلقات حبار طبيعية بيضاء نظيفة خالية من الإضافات الكيميائية، مثالية للباسطا والشوربات البحرية."
   },
   {
     "id": "barramundi",
@@ -517,7 +829,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected barramundi supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/barramundi.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك باراموندي",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك باراموندي طازج ومبرد، لحم ناصع البياض ونكهة بحرية ناعمة وقابلة لمختلف طرق التحضير."
   },
   {
     "id": "blue-crab",
@@ -530,7 +850,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected blue crab supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/blue-crab.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سلطعون أزرق (قبقب أزرق)",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سلطعون أزرق محلي طازج ومبرد، مذاق لحم حلو وغني مخصص لشوربات السي فود والصواني."
   },
   {
     "id": "john-dory",
@@ -543,7 +871,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected john dory supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/john-dory.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك جون دوري (سمكة القديس)",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك جون دوري نادر وعالي القيمة، قوام رقيق وطعم زبدة ناعم يفضله طهاة ميشلان."
   },
   {
     "id": "octopus",
@@ -556,7 +892,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected octopus supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/octopus.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "أخطبوط كامل منظف",
+    "category_ar": "الأخطبوط",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل منظف / أذرع مطهوة",
+    "storage_ar": "-18° مئوية أو مبرد على الثلج",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "أخطبوط بحري كامل منزوع الأحشاء ومنظف، مجمد سريعاً ومحتفظ بليونته وطراوته الطبيعية."
   },
   {
     "id": "smoked-eel-fish-fillet",
@@ -569,7 +913,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected smoked eel fish fillet supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/smoked-eel-fish-fillet.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "فيليه ثعبان البحر المدخن (أوناغي)",
+    "category_ar": "منتجات المأكولات البحرية",
+    "status_ar": "مجمد / جاهز للطهي",
+    "form_ar": "مجهز / بالبقسماط / مدخن",
+    "storage_ar": "تجميد عميق (-18° مئوية أو أقل)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "شرائح ثعبان بحر مدخنة على الحطب بصوص الترياكي التقليدي، جاهزة للتسخين والتقديم في السوشي."
   },
   {
     "id": "smoked-mackeral",
@@ -582,7 +934,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected smoked mackeral supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/smoked-mackeral.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "Smoked Mackeral",
+    "category_ar": "منتجات المأكولات البحرية",
+    "status_ar": "مجمد / جاهز للطهي",
+    "form_ar": "مجهز / بالبقسماط / مدخن",
+    "storage_ar": "تجميد عميق (-18° مئوية أو أقل)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "Carefully selected smoked mackeral supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia."
   },
   {
     "id": "monk-fish",
@@ -595,7 +955,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected monk fish supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/monk-fish.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك الراهب (مونك فيش)",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "ذيل سمك الراهب، يلقب بكركند الفقراء بسبب تماسكه الكثيف ونكهته القريبة من الكركند."
   },
   {
     "id": "langoustines",
@@ -608,7 +976,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected langoustines supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/langoustines.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "لانجوستين بري كامل",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "لانجوستين كامل بحري مجمد في البحر مباشرة على درجات حرارة فائقة الانخفاض."
   },
   {
     "id": "turbot-wild-farmed",
@@ -621,7 +997,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected turbot wild / farmed supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/turbot-wild-farmed.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك الترس (تيربوت بري / مستزرع)",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك تيربوت فاخر من الدرجة الأولى، لحم متماسك وأبيض ناصع ذو نكهة بحرية عميقة."
   },
   {
     "id": "squid",
@@ -634,7 +1018,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected squid supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/squid.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "حبار كامل مجمد (سبيط)",
+    "category_ar": "الحبار والسيبيا",
+    "status_ar": "مبرد / تجميد سريع فردي (IQF)",
+    "form_ar": "كامل منظف / حلقات كلماري / أنابيب حبار",
+    "storage_ar": "-18° مئوية أو مبرد على الثلج",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "حبار كامل مجمد سريعاً برأسه وأذرعه، صالح للحشو والشواء والتقطيع بالمطابخ التجارية."
   },
   {
     "id": "flounder-whole",
@@ -647,7 +1039,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected flounder whole supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/flounder-whole.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سمك موسى فلندر كامل",
+    "category_ar": "الأسماك الطازجة",
+    "status_ar": "طازج / مبرد",
+    "form_ar": "كامل منزوع الخياشيم والأحشاء / كامل مدور",
+    "storage_ar": "0° مئوية إلى 2° مئوية على ثلج مجروش",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سمك فلندر مفلطح كامل مبرد، قوام خفيف وهضم سلس ومناسب لأطباق الفرن والطهي بالبخار."
   },
   {
     "id": "vongole-clams",
@@ -660,7 +1060,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected vongole clams supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/vongole-clams.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "صدفيات فونغولي",
+    "category_ar": "المحار والصدفيات",
+    "status_ar": "حي / مبرد / مجمد",
+    "form_ar": "كامل بالقشرة / نصف قشرة",
+    "storage_ar": "حي مبرد (0° مئوية إلى 4° مئوية) أو مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "صدفيات فونغولي صغيرة ونظيفة خالية من الرمل، العنصر الأساسي لأشهر أطباق الباستا الإيطالية."
   },
   {
     "id": "carpet-shell-clams",
@@ -673,7 +1081,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected carpet shell clams supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/carpet-shell-clams.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "محار السجاد الصدفي",
+    "category_ar": "المحار والصدفيات",
+    "status_ar": "حي / مبرد / مجمد",
+    "form_ar": "كامل بالقشرة / نصف قشرة",
+    "storage_ar": "حي مبرد (0° مئوية إلى 4° مئوية) أو مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "محار صلب بقشرة منقوشة ولحم ممتلئ، محصود ومفرز بعناية تامة لقطاع الفنادق والمطاعم."
   },
   {
     "id": "australian-mussles",
@@ -686,7 +1102,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected australian mussles supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/australian-mussles.jpg",
-    "featured": false
+    "featured": false,
+    "name_ar": "بلح بحر أسترالي فاخر",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "ستيك / فيليه / قطع حصص",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "بلح بحر مستورد من المياه الأسترالية النظيفة، حبات كبيرة ولحم برتقالي غني بالعناصر الغذائية."
   },
   {
     "id": "brown-crab",
@@ -699,7 +1123,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected brown crab supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/brown-crab.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سلطعون بني كامل (براون كراب)",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سلطعون بني بري كامل، لحم غني وبطارخ بنية ذات نكهة مكثفة لخبراء المأكولات البحرية."
   },
   {
     "id": "blue-lobster",
@@ -712,7 +1144,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected blue lobster supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/blue-lobster.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "كركند أوروبي أزرق بري",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "كركند أزرق بري حي ومبرد، أحد أندر وأفخر أنواع الكركند العالمية بطعم سكري استثنائي."
   },
   {
     "id": "mud-crab",
@@ -725,7 +1165,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected mud crab supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/mud-crab.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "سلطعون الطين الاستوائي (مد كراب)",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "سلطعون طين حي بكماشات ضخمة ولحم صلب ممتلئ، بطل أطباق الشيلد كراب ومطابخ جنوب شرق آسيا."
   },
   {
     "id": "mussels",
@@ -738,7 +1186,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected mussels supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/mussels.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "بلح بحر أزرق طازج",
+    "category_ar": "المحار والصدفيات",
+    "status_ar": "حي / مبرد / مجمد",
+    "form_ar": "كامل بالقشرة / نصف قشرة",
+    "storage_ar": "حي مبرد (0° مئوية إلى 4° مئوية) أو مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "بلح بحر أزرق طازج في القشرة، محصود من مزارع بحرية مستدامة ومناسب للطهي بالصلصات البحرية."
   },
   {
     "id": "canadian-lobster",
@@ -751,7 +1207,15 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Carefully selected canadian lobster supplied by Ocean Seven for commercial foodservice, wholesale trade, and hospitality provisioning in Saudi Arabia.",
     "image": "/images/products/canadian-lobster.png",
-    "featured": true
+    "featured": true,
+    "name_ar": "كركند كندي كامل (لوبستر)",
+    "category_ar": "السلطعون والكركند",
+    "status_ar": "مبرد / مجمد",
+    "form_ar": "كامل / مجموعات أرجل / ذيول",
+    "storage_ar": "حي / مبرد / مجمد (-18° مئوية)",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "كركند شمال أطلسي كندي كامل، لحم كماشات وذيل وفير وطازج، رمز الفخامة في بوفيهات الفنادق."
   },
   {
     "id": "halibut-premium",
@@ -764,6 +1228,14 @@
     "origin": "Regional Coastal Waters & Selected Sourcing",
     "description": "Tender premium Greenland halibut portions individually flash-frozen for culinary and hotel hospitality kitchens across Saudi Arabia.",
     "image": "/images/products/halibut.png",
-    "featured": false
+    "featured": false,
+    "name_ar": "شرائح هلبوت جرينلاند الفاخرة",
+    "category_ar": "الأسماك المجمدة",
+    "status_ar": "مجمد بالتجميد السريع (-18° مئوية)",
+    "form_ar": "بالجلد / فيليه خالي من الشوك",
+    "storage_ar": "يحفظ في درجة حرارة -18° مئوية أو أقل",
+    "packaging_ar": "كرتون تجاري رئيسي / صندوق بوليسترين معزول حرارياً",
+    "origin_ar": "المياه الساحلية الإقليمية ومصادر عالمية مختارة",
+    "description_ar": "حصص وشرائح سمك هلبوت جرينلاند المتجمدة، دهون صحية وقوام رقيق ذائب في الفم."
   }
 ]

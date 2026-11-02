@@ -5,7 +5,9 @@
     "slug": "Fresh Fish",
     "count": 12,
     "description": "Daily whole fish landings chilled on ice, including Hamour, King Fish, White Pomfret, and Sea Bream.",
-    "image": "/images/products/white-pomfret.jpg"
+    "image": "/images/products/white-pomfret.jpg",
+    "name_ar": "الأسماك الطازجة",
+    "description_ar": "إنزال يومي للأسماك الكاملة المبردة على الثلج، بما في ذلك الهامور والكنعد والزبيدي الأبيض والدنيس."
   },
   {
     "id": "frozen-fish",
@@ -13,7 +15,9 @@
     "slug": "Frozen Fish",
     "count": 13,
     "description": "Deep-frozen pelagic finfish, salmon, tuna, steaks, and portions preserved at peak freshness.",
-    "image": "/images/products/blue-fin-tuna.jpg"
+    "image": "/images/products/blue-fin-tuna.jpg",
+    "name_ar": "الأسماك المجمدة",
+    "description_ar": "أسماك أوقيانوسية مجمدة بالتجميد السريع تشمل السلمون والتونة وقطع الفيليه والستيك."
   },
   {
     "id": "shrimps-prawns",
@@ -21,7 +25,9 @@
     "slug": "Shrimps & Prawns",
     "count": 5,
     "description": "Black Tiger, Vannamei, and Argentine red shrimp available head-on, peeled, and breaded.",
-    "image": "/images/products/argentinian-red-shrimps.jpg"
+    "image": "/images/products/argentinian-red-shrimps.jpg",
+    "name_ar": "الروبيان والجمبري",
+    "description_ar": "روبيان النمر الأسود، والفانامي، والروبيان الأحمر الأرجنتيني كامل بالرأس، ومقشر ومنظف، ومقرمش."
   },
   {
     "id": "crab-lobster",
@@ -29,7 +35,9 @@
     "slug": "Crab & Lobster",
     "count": 9,
     "description": "Canadian and Blue Lobster, King Crab clusters, and whole crabs handled with cold-chain care.",
-    "image": "/images/products/king-crab-cluster.jpg"
+    "image": "/images/products/king-crab-cluster.jpg",
+    "name_ar": "السلطعون والكركند",
+    "description_ar": "الكركند الكندي والأزرق، وأرجل الكينغ كراب، والقبقب وسلطعون البحر بحفظ فائق لسلسلة التبريد."
   },
   {
     "id": "squid-cuttlefish",
@@ -37,7 +45,9 @@
     "slug": "Squid & Cuttlefish",
     "count": 3,
     "description": "Tender cleaned calamari rings, whole squid tubes, and cuttlefish for culinary kitchens.",
-    "image": "/images/products/breaded-squid-ring.jpg"
+    "image": "/images/products/breaded-squid-ring.jpg",
+    "name_ar": "الحبار والسيبيا",
+    "description_ar": "حلقات كلماري طرية ومنظفة، وأنابيب الحبار الكاملة والسيبيا لمطابخ الطهاة وخدمات الضيافة."
   },
   {
     "id": "octopus",
@@ -45,7 +55,9 @@
     "slug": "Octopus",
     "count": 2,
     "description": "Whole cleaned octopus and tender cooked octopus tentacles ready for premium culinary service.",
-    "image": "/images/products/cooked-octopus-tentacles.jpg"
+    "image": "/images/products/cooked-octopus-tentacles.jpg",
+    "name_ar": "الأخطبوط",
+    "description_ar": "أخطبوط كامل منظف وأذرع أخطبوط طرية مطهوة جاهزة لخدمات الضيافة والمطاعم الفاخرة."
   },
   {
     "id": "shellfish",
@@ -53,7 +65,9 @@
     "slug": "Shellfish",
     "count": 8,
     "description": "Live scallops, Australian and whole mussels, oysters, and clams harvested from clean waters.",
-    "image": "/images/products/live-scallops.jpg"
+    "image": "/images/products/live-scallops.jpg",
+    "name_ar": "المحار والصدفيات",
+    "description_ar": "اسكالوب حي، وبلح البحر الأسترالي والكامل، والمحار والصدفيات المحصودة من مياه بحرية نقية."
   },
   {
     "id": "seafood-products",
@@ -62,6 +76,8 @@
     "alias": "Value Added Seafood",
     "count": 7,
     "description": "Chef-ready seafood mixes, breaded fish fillets, crab sticks, and smoked marine delicacies.",
-    "image": "/images/products/seafood-mix.jpg"
+    "image": "/images/products/seafood-mix.jpg",
+    "name_ar": "منتجات المأكولات البحرية",
+    "description_ar": "مشكل مأكولات بحرية جاهز للطهاة، وفيليه سمك بالبقسماط، وأصابع الكابوريا، وثعبان البحر المدخن."
   }
 ]

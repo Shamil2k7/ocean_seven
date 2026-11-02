@@ -7,8 +7,9 @@ import productsData from "@/data/products.json";
 import ProductCard from "./ProductCard";
 import ProductEnquiryModal from "./ProductEnquiryModal";
 import UnderwaterAmbient from "./UnderwaterAmbient";
+import { useLanguage } from "@/context/LanguageContext";
 
-const categories = [
+const categoriesEn = [
   "All",
   "Fresh Fish",
   "Frozen Fish",
@@ -18,13 +19,37 @@ const categories = [
   "Squid & Cuttlefish",
 ];
 
+const categoriesAr = [
+  "الكل",
+  "الأسماك الطازجة",
+  "الأسماك المجمدة",
+  "الروبيان والجمبري",
+  "السلطعون والكركند",
+  "المحار والصدفيات",
+  "الحبار والسيبيا",
+];
+
 export default function FeaturedProducts({
-  title = "EXPLORE OUR SEAFOOD COLLECTION",
-  subtitle = "Discover our selection of seafood products.",
+  title,
+  subtitle,
   activeCategory: propActiveCategory,
   onSelectCategory: propOnSelectCategory,
   showCategoryTabs = true,
 }) {
+  const { lang, isRTL, t } = useLanguage();
+  const isArabic = lang === "ar";
+
+  const defaultTitle = isArabic
+    ? "استكشف تشكيلة مأكولاتنا البحرية"
+    : "EXPLORE OUR SEAFOOD COLLECTION";
+
+  const defaultSubtitle = isArabic
+    ? "اكتشف مجموعتنا المختارة من المأكولات البحرية التجارية عالية الجودة."
+    : "Discover our selection of seafood products.";
+
+  const displayTitle = title || defaultTitle;
+  const displaySubtitle = subtitle || defaultSubtitle;
+
   const [internalCategory, setInternalCategory] = useState("All");
   const activeCategory = propActiveCategory !== undefined ? propActiveCategory : internalCategory;
   const setActiveCategory = propOnSelectCategory || setInternalCategory;
@@ -32,20 +57,46 @@ export default function FeaturedProducts({
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const categories = isArabic ? categoriesAr : categoriesEn;
+
   const filteredProducts = useMemo(() => {
     let list = productsData;
-    const current = activeCategory.trim().toLowerCase();
-    if (current !== "all") {
+    const current = (activeCategory || "").trim().toLowerCase();
+    if (current !== "all" && current !== "الكل") {
       list = list.filter((p) => {
-        const prodCat = p.category.toLowerCase().trim();
-        if (prodCat === current) return true;
-        if (current === "seafood products" && prodCat === "value added seafood") return true;
-        if (current === "value added seafood" && prodCat === "seafood products") return true;
+        const catEn = (p.category || "").toLowerCase().trim();
+        const catAr = (p.category_ar || "").toLowerCase().trim();
+        if (catEn === current || catAr === current) return true;
+        if (
+          (current === "seafood products" || current === "منتجات المأكولات البحرية") &&
+          (catEn.includes("value added") || catEn.includes("seafood products"))
+        ) {
+          return true;
+        }
+        if (
+          current === "value added seafood" &&
+          (catEn.includes("seafood products") || catEn.includes("value added"))
+        ) {
+          return true;
+        }
         return false;
       });
     } else {
       // Show premier curated selection on homepage
-      list = list.filter((p) => p.featured || ["hamour-whole", "blue-fin-tuna", "canadian-lobster", "shrimps-h-on-black-tiger", "squid-ring", "live-scallops", "king-fish-steak", "cooked-octopus-tentacles"].includes(p.id));
+      list = list.filter(
+        (p) =>
+          p.featured ||
+          [
+            "hamour-whole",
+            "blue-fin-tuna",
+            "canadian-lobster",
+            "shrimps-h-on-black-tiger",
+            "squid-ring",
+            "live-scallops",
+            "king-fish-steak",
+            "cooked-octopus-tentacles",
+          ].includes(p.id)
+      );
     }
     return list.slice(0, 8);
   }, [activeCategory]);
@@ -67,8 +118,8 @@ export default function FeaturedProducts({
         showRays={true}
         slidingImage={{
           src: "/images/hero/ocean-depths.jpg",
-          alt: "Ocean depths background",
-          position: "right",
+          alt: isArabic ? "أعماق المحيط" : "Ocean depths background",
+          position: isRTL ? "left" : "right",
           opacity: 0.08,
         }}
       />
@@ -81,16 +132,16 @@ export default function FeaturedProducts({
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface border border-border rounded-xs mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-ocean" />
               <span className="text-[11px] uppercase tracking-widest font-heading font-semibold text-ocean">
-                Commercial Seafood Portfolio
+                {isArabic ? "محفظة المأكولات البحرية التجارية" : "Commercial Seafood Portfolio"}
               </span>
             </div>
             
             <h2 className="font-heading font-semibold text-2xl sm:text-4xl lg:text-4xl text-navy tracking-tight uppercase">
-              {title}
+              {displayTitle}
             </h2>
             
             <p className="mt-2 text-muted text-sm sm:text-base leading-relaxed">
-              {subtitle}
+              {displaySubtitle}
             </p>
           </div>
 
@@ -99,8 +150,8 @@ export default function FeaturedProducts({
               href="/products"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-navy hover:bg-ocean text-white font-heading font-semibold text-xs uppercase tracking-wider rounded-xs transition-colors shadow-2xs"
             >
-              <span>View All Products</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>{isArabic ? "عرض جميع المنتجات" : "View All Products"}</span>
+              <ArrowRight className="w-4 h-4 rtl:rotate-180" />
             </Link>
           </div>
         </div>
@@ -108,20 +159,26 @@ export default function FeaturedProducts({
         {/* Optional Category Filter Tabs (hidden when using circular CategoryShowcase navigation) */}
         {showCategoryTabs && (
           <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 scrollbar-none border-b border-border">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setActiveCategory(cat)}
-                className={`px-3 sm:px-4 py-1.5 rounded-xs text-xs font-heading font-medium tracking-wide transition-colors whitespace-nowrap shrink-0 ${
-                  activeCategory === cat
-                    ? "bg-navy text-white font-semibold"
-                    : "bg-surface text-charcoal hover:bg-border/60 border border-border"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+            {categories.map((cat) => {
+              const isActive =
+                activeCategory === cat ||
+                (activeCategory === "All" && cat === "الكل") ||
+                (activeCategory === "الكل" && cat === "All");
+              return (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-3 sm:px-4 py-1.5 rounded-xs text-xs font-heading font-medium tracking-wide transition-colors whitespace-nowrap shrink-0 ${
+                    isActive
+                      ? "bg-navy text-white font-semibold"
+                      : "bg-surface text-charcoal hover:bg-border/60 border border-border"
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
           </div>
         )}
 
@@ -142,8 +199,12 @@ export default function FeaturedProducts({
             href="/products"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-surface hover:bg-navy hover:text-white text-charcoal border border-border text-xs font-heading font-semibold uppercase tracking-widest rounded-xs transition-all shadow-2xs"
           >
-            <span>Explore All 59 Products in Catalogue</span>
-            <ArrowRight className="w-4 h-4 text-ocean" />
+            <span>
+              {isArabic
+                ? "استكشف جميع الأصناف الـ 59 في الكتالوج التجاري"
+                : "Explore All 59 Products in Catalogue"}
+            </span>
+            <ArrowRight className="w-4 h-4 text-ocean rtl:rotate-180" />
           </Link>
         </div>
 

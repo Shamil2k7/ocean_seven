@@ -10,8 +10,11 @@ import {
   Truck,
 } from "lucide-react";
 import UnderwaterAmbient from "./UnderwaterAmbient";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hero() {
+  const { lang, isRTL } = useLanguage();
+
   return (
     <section className="hero relative w-full overflow-hidden bg-[#041926] text-white">
       
@@ -24,7 +27,7 @@ export default function Hero() {
           <div className="absolute inset-0 ocean-bg-drift">
             <Image
               src="/images/hero/ocean-seven-hero.jpg"
-              alt="Ocean Seven fresh seafood on ice against deep ocean waters"
+              alt={lang === "ar" ? "أوشن سفن مأكولات بحرية طازجة على الثلج في مياه المحيط" : "Ocean Seven fresh seafood on ice against deep ocean waters"}
               fill
               priority
               className="object-cover object-right lg:object-center"
@@ -42,30 +45,41 @@ export default function Hero() {
             bubbleCount={7}
           />
 
-          {/* Desktop Left Gradient for Text Contrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#041926]/95 via-[#041926]/75 to-transparent w-3/5 z-[2]" />
+          {/* Desktop Left/Right Gradient for Text Contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r rtl:bg-gradient-to-l from-[#041926]/95 via-[#041926]/75 to-transparent w-3/5 z-[2]" />
         </div>
 
-        {/* Desktop Hero Content (Left 50%) */}
+        {/* Desktop Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full my-auto">
           <div className="max-w-xl lg:max-w-2xl py-6 lg:py-10">
             {/* Eyebrow */}
             <div className="flex items-center gap-2 mb-4">
               <span className="w-1.5 h-5 bg-ocean rounded-xs" />
               <span className="text-xs uppercase tracking-widest font-heading font-semibold text-ocean-light">
-                FRESH FROM THE OCEAN
+                {lang === "ar" ? "طازج مباشرة من أعماق المحيط" : "FRESH FROM THE OCEAN"}
               </span>
             </div>
 
             {/* Desktop Headline */}
             <h1 className="font-heading font-semibold text-5xl lg:text-6xl text-white tracking-tight leading-[1.12]">
-              Premium Seafood<br />
-              For a <span className="text-ocean">Better Tomorrow</span>
+              {lang === "ar" ? (
+                <>
+                  مأكولات بحرية فاخرة<br />
+                  من أجل <span className="text-ocean">مستقبل أفضل</span>
+                </>
+              ) : (
+                <>
+                  Premium Seafood<br />
+                  For a <span className="text-ocean">Better Tomorrow</span>
+                </>
+              )}
             </h1>
 
             {/* Supporting Copy */}
             <p className="mt-5 text-base lg:text-lg text-white/90 leading-relaxed font-normal max-w-lg">
-              Discover quality seafood products, carefully selected for freshness and dependable supply.
+              {lang === "ar"
+                ? "اكتشف منتجات بحرية عالية الجودة، مختارة بعناية فائقة لضمان أعلى معايير الطزاجة والإمداد الموثوق."
+                : "Discover quality seafood products, carefully selected for freshness and dependable supply."}
             </p>
 
             {/* Primary CTA */}
@@ -74,8 +88,8 @@ export default function Hero() {
                 href="/products"
                 className="px-7 py-3.5 bg-white hover:bg-ocean hover:text-white text-navy font-heading font-semibold text-sm uppercase tracking-wider rounded-xs transition-all shadow-md flex items-center justify-center gap-2 group"
               >
-                <span>Discover Our Products</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <span>{lang === "ar" ? "استكشف منتجاتنا البحرية" : "Discover Our Products"}</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
               </Link>
             </div>
           </div>
@@ -84,46 +98,64 @@ export default function Hero() {
         {/* Desktop Quality Information Bar */}
         <div id="quality" className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full mt-6">
           <div className="bg-[#051c2b]/80 backdrop-blur-md border border-white/15 rounded-2xl p-5 shadow-2xl">
-            <div className="grid grid-cols-4 gap-6 divide-x divide-white/10">
-              <div className="flex items-center gap-3.5 pl-3 first:pl-0">
+            <div className="grid grid-cols-4 gap-6 divide-x rtl:divide-x-reverse divide-white/10">
+              
+              <div className="flex items-center gap-3.5 pl-3 rtl:pl-0 rtl:pr-3 first:pl-0 first:rtl:pr-0">
                 <div className="w-10 h-10 rounded-xs bg-ocean/20 border border-ocean/30 flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-5 h-5 text-ocean" />
                 </div>
                 <div>
-                  <span className="block font-heading font-semibold text-sm text-white">Superior Quality</span>
-                  <span className="text-[11px] text-white/70 block">SFDA Inspected & Certified</span>
+                  <span className="block font-heading font-semibold text-sm text-white">
+                    {lang === "ar" ? "جودة استثنائية" : "Superior Quality"}
+                  </span>
+                  <span className="text-[11px] text-white/70 block">
+                    {lang === "ar" ? "معتمد ومفحوص من الغذاء والدواء" : "SFDA Inspected & Certified"}
+                  </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3.5 pl-6">
+              <div className="flex items-center gap-3.5 pl-6 rtl:pl-0 rtl:pr-6">
                 <div className="w-10 h-10 rounded-xs bg-ocean/20 border border-ocean/30 flex items-center justify-center shrink-0">
                   <Snowflake className="w-5 h-5 text-ocean" />
                 </div>
                 <div>
-                  <span className="block font-heading font-semibold text-sm text-white">Freshness Focused</span>
-                  <span className="text-[11px] text-white/70 block">Continuous Cold-Chain</span>
+                  <span className="block font-heading font-semibold text-sm text-white">
+                    {lang === "ar" ? "طزاجة فائقة" : "Freshness Focused"}
+                  </span>
+                  <span className="text-[11px] text-white/70 block">
+                    {lang === "ar" ? "سلسلة تبريد متصلة ومراقبة" : "Continuous Cold-Chain"}
+                  </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3.5 pl-6">
+              <div className="flex items-center gap-3.5 pl-6 rtl:pl-0 rtl:pr-6">
                 <div className="w-10 h-10 rounded-xs bg-ocean/20 border border-ocean/30 flex items-center justify-center shrink-0">
                   <Globe2 className="w-5 h-5 text-ocean" />
                 </div>
                 <div>
-                  <span className="block font-heading font-semibold text-sm text-white">Customer Commitment</span>
-                  <span className="text-[11px] text-white/70 block">Dedicated Trading Desk</span>
+                  <span className="block font-heading font-semibold text-sm text-white">
+                    {lang === "ar" ? "التزام تجاه العملاء" : "Customer Commitment"}
+                  </span>
+                  <span className="text-[11px] text-white/70 block">
+                    {lang === "ar" ? "مكتب تجارة وتعاقدات متخصص" : "Dedicated Trading Desk"}
+                  </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3.5 pl-6">
+              <div className="flex items-center gap-3.5 pl-6 rtl:pl-0 rtl:pr-6">
                 <div className="w-10 h-10 rounded-xs bg-ocean/20 border border-ocean/30 flex items-center justify-center shrink-0">
                   <Truck className="w-5 h-5 text-ocean" />
                 </div>
                 <div>
-                  <span className="block font-heading font-semibold text-sm text-white">Reliable Supply</span>
-                  <span className="text-[11px] text-white/70 block">From Jeddah Port Gateway</span>
+                  <span className="block font-heading font-semibold text-sm text-white">
+                    {lang === "ar" ? "إمداد موثوق" : "Reliable Supply"}
+                  </span>
+                  <span className="text-[11px] text-white/70 block">
+                    {lang === "ar" ? "انطلاقاً من بوابة ميناء جدة" : "From Jeddah Port Gateway"}
+                  </span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -152,7 +184,7 @@ export default function Hero() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero/ocean-seven-hero-mobile.webp"
-            alt="Ocean Seven fresh seafood on ice underwater"
+            alt={lang === "ar" ? "أوشن سفن مأكولات بحرية طازجة" : "Ocean Seven fresh seafood on ice underwater"}
             fill
             priority
             className="object-cover object-bottom"
@@ -182,31 +214,43 @@ export default function Hero() {
           <div className="flex items-center gap-1.5 mb-1.5 min-[390px]:mb-2">
             <span className="w-1 h-3.5 bg-ocean rounded-xs" />
             <span className="text-[10px] min-[390px]:text-[11px] uppercase tracking-widest font-heading font-semibold text-ocean-light">
-              FRESH FROM THE OCEAN
+              {lang === "ar" ? "طازج مباشرة من أعماق المحيط" : "FRESH FROM THE OCEAN"}
             </span>
           </div>
 
-          {/* Large Mobile Headline (Bold modern sans-serif, 38-54px scaling, tight line-height) */}
+          {/* Large Mobile Headline */}
           <h1 className="font-heading font-bold text-[36px] min-[375px]:text-[40px] min-[390px]:text-[44px] min-[414px]:text-[48px] min-[430px]:text-[52px] text-white tracking-tight leading-[1.04]">
-            Premium<br />
-            Seafood<br />
-            for a <span className="text-ocean">Healthier Life</span>
+            {lang === "ar" ? (
+              <>
+                مأكولات<br />
+                بحرية فاخرة<br />
+                لحياة <span className="text-ocean">أكثر صحة</span>
+              </>
+            ) : (
+              <>
+                Premium<br />
+                Seafood<br />
+                for a <span className="text-ocean">Healthier Life</span>
+              </>
+            )}
           </h1>
 
-          {/* Left-Aligned Supporting Copy */}
+          {/* Supporting Copy */}
           <p className="mt-2 min-[390px]:mt-2.5 text-xs min-[390px]:text-sm text-white/90 leading-snug font-normal max-w-[310px] min-[390px]:max-w-[340px]">
-            Bringing you quality seafood, sourced and supplied with care.
+            {lang === "ar"
+              ? "نوفر لكم أجود المأكولات البحرية، الموردة والموزعة بكل عناية وموثوقية."
+              : "Bringing you quality seafood, sourced and supplied with care."}
           </p>
 
-          {/* Single Primary CTA Button (White pill, navy text, circular navy arrow) */}
+          {/* Single Primary CTA Button */}
           <div className="mt-3.5 min-[390px]:mt-4.5 flex items-center">
             <Link
               href="/products"
               className="inline-flex items-center gap-3 px-5 py-2.5 min-[390px]:py-3 bg-white text-navy font-heading font-semibold text-xs min-[390px]:text-sm rounded-full shadow-lg transition-transform active:scale-95 group"
             >
-              <span>Discover Our Products</span>
+              <span>{lang === "ar" ? "استكشف منتجاتنا" : "Discover Our Products"}</span>
               <span className="w-6 h-6 rounded-full bg-navy text-white flex items-center justify-center shrink-0">
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 rtl:rotate-180" />
               </span>
             </Link>
           </div>
@@ -217,15 +261,14 @@ export default function Hero() {
 
         {/* Bottom Area: 4-Column Quality Bar (Single Row) + Subtle Curved Wave */}
         <div className="relative z-10 w-full mb-1">
-          {/* 4 Columns in a Single Row */}
           <div className="bg-[#062438]/85 backdrop-blur-md border border-ocean/40 rounded-2xl p-2.5 min-[390px]:p-3 shadow-2xl mx-auto w-full max-w-md">
-            <div className="grid grid-cols-4 divide-x divide-white/15">
+            <div className="grid grid-cols-4 divide-x rtl:divide-x-reverse divide-white/15">
               
               {/* 1. Superior Quality */}
               <div className="flex flex-col items-center text-center px-1">
                 <ShieldCheck className="w-4 h-4 min-[390px]:w-4.5 min-[390px]:h-4.5 text-ocean shrink-0 mb-1" />
                 <span className="text-[9px] min-[390px]:text-[10px] font-semibold text-white leading-tight">
-                  Superior<br />Quality
+                  {lang === "ar" ? <>جودة<br />استثنائية</> : <>Superior<br />Quality</>}
                 </span>
               </div>
 
@@ -233,7 +276,7 @@ export default function Hero() {
               <div className="flex flex-col items-center text-center px-1">
                 <Snowflake className="w-4 h-4 min-[390px]:w-4.5 min-[390px]:h-4.5 text-ocean shrink-0 mb-1" />
                 <span className="text-[9px] min-[390px]:text-[10px] font-semibold text-white leading-tight">
-                  Always<br />Fresh
+                  {lang === "ar" ? <>طزاجة<br />دائمة</> : <>Always<br />Fresh</>}
                 </span>
               </div>
 
@@ -241,7 +284,7 @@ export default function Hero() {
               <div className="flex flex-col items-center text-center px-1">
                 <Globe2 className="w-4 h-4 min-[390px]:w-4.5 min-[390px]:h-4.5 text-ocean shrink-0 mb-1" />
                 <span className="text-[9px] min-[390px]:text-[10px] font-semibold text-white leading-tight">
-                  Globally<br />Trusted
+                  {lang === "ar" ? <>ثقة<br />عالمية</> : <>Globally<br />Trusted</>}
                 </span>
               </div>
 
@@ -249,7 +292,7 @@ export default function Hero() {
               <div className="flex flex-col items-center text-center px-1">
                 <Truck className="w-4 h-4 min-[390px]:w-4.5 min-[390px]:h-4.5 text-ocean shrink-0 mb-1" />
                 <span className="text-[9px] min-[390px]:text-[10px] font-semibold text-white leading-tight">
-                  Reliable<br />Delivery
+                  {lang === "ar" ? <>توصيل<br />موثوق</> : <>Reliable<br />Delivery</>}
                 </span>
               </div>
 
